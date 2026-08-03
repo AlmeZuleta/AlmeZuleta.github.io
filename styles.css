@@ -240,6 +240,7 @@ h3 {
 .two-column p,
 .split-content p,
 .portrait-study p,
+.institutional-footer p,
 .source-list p {
   color: #3c4540;
   font-size: 18px;
@@ -589,6 +590,46 @@ h3 {
   padding: 30px;
 }
 
+.institutional-footer {
+  align-items: center;
+  background: var(--ink);
+  color: #fffaf2;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+  padding: clamp(42px, 7vw, 74px) clamp(22px, 6vw, 86px);
+}
+
+.institutional-footer strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.08;
+  margin-bottom: 12px;
+}
+
+.institutional-footer p {
+  color: rgba(255, 250, 242, 0.78);
+}
+
+.footer-logos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-logos img {
+  background: rgba(255, 250, 242, 0.92);
+  border-radius: 6px;
+  display: block;
+  max-height: 72px;
+  max-width: 180px;
+  object-fit: contain;
+  padding: 10px 14px;
+  width: auto;
+}
+
 @media (max-width: 900px) {
   .site-header {
     align-items: flex-start;
@@ -608,7 +649,8 @@ h3 {
   .feature-grid,
   .archive-grid,
   .split-content,
-  .portrait-study {
+  .portrait-study,
+  .institutional-footer {
     grid-template-columns: 1fr;
   }
 

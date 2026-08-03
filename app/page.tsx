@@ -152,7 +152,6 @@ export default function Home() {
           <a href="#linea-tiempo">Línea de tiempo</a>
           <a href="#palacio">El palacio</a>
           <a href="#ruinas">Las ruinas</a>
-          <a href="#fuentes">Fuentes</a>
         </nav>
       </header>
 
@@ -411,34 +410,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section sources" id="fuentes">
-        <div className="section-heading">
-          <p className="eyebrow">Fuentes y créditos</p>
-          <h2>Material de trabajo</h2>
+      <footer className="institutional-footer">
+        <div className="footer-logos" aria-label="Instituciones">
+          <img src="/archive/logo-uv.png" alt="Universidad de Valparaíso" />
+          <img src="/archive/logo-postgrado-uv.png" alt="Postgrado UV" />
         </div>
-        <div className="source-list">
-          <p>
-            Contenido base reorganizado desde los documentos de trabajo:
-            <strong> “Resumen información.docx”</strong> e
-            <strong> “Info linea de tiempo.docx”</strong>.
-          </p>
-          <p>
-            Archivo fotográfico y logos institucionales integrados desde el
-            repositorio compartido:
-            <strong> FernandoTaum/HaciendaQuilpue</strong>.
-          </p>
-          <p>
-            Autoría de la investigación y curaduría del recorrido:
-            <strong> Almendra Zuleta Díaz</strong>.
-          </p>
-          <p>
-            Repositorio de recursos:
-            <a href="https://github.com/FernandoTaum/HaciendaQuilpue">
-              github.com/FernandoTaum/HaciendaQuilpue
-            </a>.
-          </p>
+        <div>
+          <span className="label">Autora</span>
+          <strong>Almendra Zuleta Díaz</strong>
+          <p>Magíster en Patrimonio · Universidad de Valparaíso</p>
         </div>
-      </section>
+      </footer>
     </main>
   );
 }

@@ -75,15 +75,63 @@ const memoryItems = [
   "El sitio opera como espacio de memoria colectiva, encuentro comunitario y reflexión patrimonial.",
 ];
 
+const archiveItems = [
+  {
+    src: "/archive/hero-palacio-1915.jpg",
+    title: "Parte delantera del palacio",
+    caption: "Registro histórico del frente del Palacio Hacienda Quilpué, 1915.",
+  },
+  {
+    src: "/archive/acceso-palacio-1915.jpg",
+    title: "Acceso al palacio",
+    caption: "Cercanía, escala y ornamentación del acceso principal, año 1915.",
+  },
+  {
+    src: "/archive/acceso-comunidad-1915.jpg",
+    title: "Acceso y comunidad",
+    caption: "Grupo reunido junto al acceso, evidencia de la vida social del recinto.",
+  },
+  {
+    src: "/archive/jardines-palacio-1915.jpg",
+    title: "Jardines principales",
+    caption: "Áreas exteriores asociadas al paseo, la representación y el paisaje.",
+  },
+  {
+    src: "/archive/parrones-palacio.jpg",
+    title: "Parrones interiores",
+    caption: "Imagen de los parrones como parte del ambiente doméstico y productivo.",
+  },
+  {
+    src: "/archive/misiones-religiosas-palacio.jpg",
+    title: "Misiones religiosas",
+    caption: "Actividades religiosas realizadas para la comunidad de San Felipe.",
+  },
+  {
+    src: "/archive/retrato-familiar-duenos-1915.jpg",
+    title: "Retrato familiar",
+    caption: "Registro familiar realizado dentro del palacio, año 1915.",
+  },
+  {
+    src: "/archive/retrato-familiar-hijos-1915.jpg",
+    title: "Infancias en el palacio",
+    caption: "Retrato de hijos de propietarios, vinculado a la vida cotidiana del lugar.",
+  },
+];
+
 export default function Home() {
   return (
     <main>
       <header className="site-header" aria-label="Navegación principal">
         <a className="brand" href="#inicio">
+          <span className="brand-logos">
+            <img src="/archive/logo-uv.png" alt="Universidad de Valparaíso" />
+            <img src="/archive/logo-postgrado-uv.png" alt="Postgrado UV" />
+          </span>
           <span>Palacio Hacienda Quilpué</span>
         </a>
         <nav>
           <a href="#patrimonio">Patrimonio</a>
+          <a href="#archivo">Archivo</a>
           <a href="#linea-tiempo">Línea de tiempo</a>
           <a href="#palacio">El palacio</a>
           <a href="#ruinas">Las ruinas</a>
@@ -144,6 +192,31 @@ export default function Home() {
             asociadas al trabajo rural, la familia Edwards Ross, la
             transformación de las haciendas y la memoria actual de San Felipe.
           </p>
+        </div>
+      </section>
+
+      <section className="section archive-section" id="archivo">
+        <div className="section-heading wide">
+          <p className="eyebrow">Archivo visual</p>
+          <h2>Imágenes históricas del palacio</h2>
+          <p>
+            El recorrido incorpora registros fotográficos del Palacio Hacienda
+            Quilpué asociados al periodo de esplendor del inmueble. Estas
+            imágenes permiten observar el acceso, la fachada, los jardines, la
+            sociabilidad familiar y las prácticas religiosas vinculadas al
+            recinto.
+          </p>
+        </div>
+        <div className="archive-grid">
+          {archiveItems.map((item) => (
+            <figure className="archive-card" key={item.src}>
+              <img src={item.src} alt={item.title} />
+              <figcaption>
+                <strong>{item.title}</strong>
+                <span>{item.caption}</span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
@@ -243,6 +316,20 @@ export default function Home() {
             comunidad y para los trabajadores de la hacienda.
           </p>
         </div>
+        <div className="portrait-study">
+          <img src="/archive/juana-ross.jpg" alt="Retrato de Juana Ross Edwards" />
+          <div>
+            <span className="label">Figura histórica</span>
+            <h3>Juana Ross Edwards</h3>
+            <p>
+              Su figura permite vincular la historia arquitectónica del palacio
+              con redes de filantropía, beneficencia y apoyo social durante el
+              siglo XIX. El retrato funciona aquí como punto de entrada a una
+              lectura patrimonial donde familia, territorio y memoria pública
+              se cruzan.
+            </p>
+          </div>
+        </div>
         <div className="research-columns">
           <article>
             <h3>La hacienda</h3>
@@ -283,13 +370,19 @@ export default function Home() {
             <strong> “Info linea de tiempo.docx”</strong>.
           </p>
           <p>
-            Imagen histórica de portada: <strong>Hacienda Quilpué, Palacio</strong>,
-            fotografía tomada en 1922, fuente Memoria Chilena, autor
-            desconocido, disponible en Wikimedia Commons bajo dominio público.
+            Archivo fotográfico y logos institucionales integrados desde el
+            repositorio compartido:
+            <strong> FernandoTaum/HaciendaQuilpue</strong>.
           </p>
           <p>
             Autoría de la investigación y curaduría del recorrido:
             <strong> Almendra Zuleta Díaz</strong>.
+          </p>
+          <p>
+            Repositorio de recursos:
+            <a href="https://github.com/FernandoTaum/HaciendaQuilpue">
+              github.com/FernandoTaum/HaciendaQuilpue
+            </a>.
           </p>
         </div>
       </section>

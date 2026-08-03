@@ -35,10 +35,14 @@ test("server-renders the heritage thesis site", async () => {
   assert.match(html, /Almendra Zuleta Díaz/);
   assert.match(html, /Magíster en Patrimonio/);
   assert.match(html, /¿Qué es patrimonio\?/);
+  assert.match(html, /Imágenes históricas del palacio/);
+  assert.match(html, /\/archive\/hero-palacio-1915\.jpg/);
+  assert.match(html, /\/archive\/logo-uv\.png/);
   assert.match(html, /Línea de tiempo/);
   assert.match(html, /1886-1888/);
   assert.match(html, /Epidemia del cólera/);
   assert.match(html, /Versalles Chileno/);
+  assert.match(html, /FernandoTaum\/HaciendaQuilpue/);
   assert.match(html, /Fuentes y créditos/);
   assert.match(html, /og:image" content="\/og\.png"/);
 });

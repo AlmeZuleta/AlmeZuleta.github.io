@@ -40,6 +40,8 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+/site-package-*.tgz
+/.sites-stage-*/
 
 # local thesis source materials and extraction scratch
 /content-extract/

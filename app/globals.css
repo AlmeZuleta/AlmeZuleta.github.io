@@ -312,19 +312,85 @@ h3 {
 }
 
 .timeline {
-  border-top: 1px solid var(--line);
   list-style: none;
-  margin: 28px 0 0;
+  margin: 34px 0 0;
   max-width: 1120px;
   padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  background: linear-gradient(var(--clay), var(--gold), var(--blue));
+  content: "";
+  height: calc(100% - 32px);
+  left: 33px;
+  opacity: 0.55;
+  position: absolute;
+  top: 16px;
+  width: 2px;
 }
 
 .timeline li {
-  border-bottom: 1px solid var(--line);
   display: grid;
-  gap: 28px;
-  grid-template-columns: minmax(160px, 250px) minmax(0, 1fr);
-  padding: 26px 0;
+  gap: 26px;
+  grid-template-columns: 68px minmax(0, 1fr);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-rail {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-rail span {
+  align-items: center;
+  background: var(--paper);
+  border: 2px solid var(--clay);
+  border-radius: 999px;
+  color: var(--clay);
+  display: inline-flex;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 700;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
+}
+
+.timeline-card {
+  background:
+    linear-gradient(135deg, rgba(255, 250, 242, 0.96), rgba(247, 243, 236, 0.92));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(31, 38, 36, 0.08);
+  display: grid;
+  gap: 22px;
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.timeline-card:hover {
+  border-color: rgba(138, 63, 45, 0.45);
+  transform: translateY(-2px);
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.timeline-meta {
+  align-content: start;
+  display: grid;
+  gap: 12px;
+}
+
+.timeline-meta span {
+  color: var(--olive);
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
 }
 
 .timeline time {
@@ -518,6 +584,21 @@ h3 {
   }
 
   .timeline li {
+    gap: 14px;
+    grid-template-columns: 50px minmax(0, 1fr);
+  }
+
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline-rail span {
+    font-size: 13px;
+    height: 34px;
+    width: 34px;
+  }
+
+  .timeline-card {
     grid-template-columns: 1fr;
   }
 }

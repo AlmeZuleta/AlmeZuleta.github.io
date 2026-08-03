@@ -1,45 +1,54 @@
 const timeline = [
   {
+    phase: "Origen territorial",
     period: "1740",
     title: "Fundación de San Felipe el Real",
     text: "El Valle del Aconcagua se consolida como territorio agrícola y ganadero, con haciendas que articulan producción, vivienda, servicios, caminos interiores y vida comunitaria.",
   },
   {
+    phase: "Paisaje hacendal",
     period: "Primeras décadas del siglo XIX",
     title: "Consolidación de las haciendas",
     text: "Propiedades como Lo Vicuña, El Tártaro y Quilpué fortalecen el prestigio social y económico de sus propietarios, al mismo tiempo que configuran el paisaje rural regional.",
   },
   {
+    phase: "Familia y beneficencia",
     period: "1830",
     title: "Nacimiento de Juana Ross Edwards",
     text: "Nace en La Serena una figura central para la historia del palacio, reconocida por su vocación religiosa, filantrópica y de servicio social.",
   },
   {
+    phase: "Proyecto arquitectónico",
     period: "1866-1880",
     title: "Construcción del Palacio Hacienda Quilpué",
     text: "El arquitecto Juan Eduardo Fehrman proyecta una residencia de inspiración francesa, excepcional para el contexto rural del Valle del Aconcagua.",
   },
   {
+    phase: "Crisis sanitaria",
     period: "1886-1888",
     title: "Epidemia del cólera",
     text: "Juana Ross organiza ayuda sanitaria y social mediante lazaretos, alimentos, ropa, medicamentos y atención para trabajadores e inquilinos de la hacienda.",
   },
   {
+    phase: "Reconocimiento social",
     period: "Primeras décadas del siglo XX",
     title: "Esplendor del palacio",
     text: "La residencia recibe visitas internacionales y consolida su imagen pública como el “Versalles Chileno”, asociada a lujo, jardines y sociabilidad aristocrática.",
   },
   {
+    phase: "Transformación institucional",
     period: "1967-1973",
     title: "Traspaso, reforma agraria y proyecto universitario",
     text: "La propiedad pasa al Estado de Chile y se proyecta como centro de formación para Agronomía, iniciativa interrumpida por los acontecimientos políticos de 1973.",
   },
   {
+    phase: "Deterioro material",
     period: "1985",
     title: "Demolición parcial",
     text: "Tras daños estructurales vinculados al terremoto, se retiran techumbre, chimeneas y parte de la estructura interior; luego desaparecen pisos, vigas, pilares y mobiliario.",
   },
   {
+    phase: "Memoria vigente",
     period: "Actualidad",
     title: "Ruinas, memoria y actividades culturales",
     text: "Las ruinas permanecen como testimonio patrimonial de San Felipe y del Valle del Aconcagua, acogiendo algunas actividades culturales en los antiguos jardines.",
@@ -232,12 +241,20 @@ export default function Home() {
           </p>
         </div>
         <ol className="timeline">
-          {timeline.map((item) => (
+          {timeline.map((item, index) => (
             <li key={`${item.period}-${item.title}`}>
-              <time>{item.period}</time>
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
+              <div className="timeline-rail" aria-hidden="true">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <div className="timeline-card">
+                <div className="timeline-meta">
+                  <span>{item.phase}</span>
+                  <time>{item.period}</time>
+                </div>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
               </div>
             </li>
           ))}

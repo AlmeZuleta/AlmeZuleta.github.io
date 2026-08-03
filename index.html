@@ -101,30 +101,66 @@
         </div>
         <div class="archive-grid">
           <figure class="archive-card">
-            <img src="public/archive/hero-palacio-1915.jpg" alt="Parte delantera del palacio" />
+            <a href="#archivo-fachada">
+              <img src="public/archive/hero-palacio-1915.jpg" alt="Parte delantera del palacio" />
+            </a>
             <figcaption><strong>Parte delantera</strong><span>Registro histórico del frente del Palacio Hacienda Quilpué, 1915.</span></figcaption>
           </figure>
           <figure class="archive-card">
-            <img src="public/archive/acceso-palacio-1915.jpg" alt="Acceso al palacio" />
+            <a href="#archivo-acceso">
+              <img src="public/archive/acceso-palacio-1915.jpg" alt="Acceso al palacio" />
+            </a>
             <figcaption><strong>Acceso al palacio</strong><span>Cercanía, escala y ornamentación del acceso principal.</span></figcaption>
           </figure>
           <figure class="archive-card">
-            <img src="public/archive/jardines-palacio-1915.jpg" alt="Jardines principales" />
+            <a href="#archivo-jardines">
+              <img src="public/archive/jardines-palacio-1915.jpg" alt="Jardines principales" />
+            </a>
             <figcaption><strong>Jardines principales</strong><span>Áreas exteriores asociadas al paseo, la representación y el paisaje.</span></figcaption>
           </figure>
           <figure class="archive-card">
-            <img src="public/archive/parrones-palacio.jpg" alt="Parrones interiores" />
+            <a href="#archivo-parrones">
+              <img src="public/archive/parrones-palacio.jpg" alt="Parrones interiores" />
+            </a>
             <figcaption><strong>Parrones interiores</strong><span>Ambiente doméstico, productivo y de sociabilidad cotidiana.</span></figcaption>
           </figure>
           <figure class="archive-card">
-            <img src="public/archive/misiones-religiosas-palacio.jpg" alt="Misiones religiosas" />
+            <a href="#archivo-misiones">
+              <img src="public/archive/misiones-religiosas-palacio.jpg" alt="Misiones religiosas" />
+            </a>
             <figcaption><strong>Misiones religiosas</strong><span>Actividades religiosas realizadas para la comunidad de San Felipe.</span></figcaption>
           </figure>
           <figure class="archive-card">
-            <img src="public/archive/retrato-familiar-duenos-1915.jpg" alt="Retrato familiar" />
+            <a href="#archivo-familia">
+              <img src="public/archive/retrato-familiar-duenos-1915.jpg" alt="Retrato familiar" />
+            </a>
             <figcaption><strong>Retrato familiar</strong><span>Registro familiar realizado dentro del palacio, año 1915.</span></figcaption>
           </figure>
         </div>
+        <aside class="lightbox" id="archivo-fachada">
+          <a class="lightbox-backdrop" href="#archivo" aria-label="Cerrar imagen"></a>
+          <figure><a class="lightbox-close" href="#archivo" aria-label="Cerrar imagen">Cerrar</a><img src="public/archive/hero-palacio-1915.jpg" alt="Parte delantera del palacio" /><figcaption><strong>Parte delantera</strong><span>Registro histórico del frente del Palacio Hacienda Quilpué, 1915.</span></figcaption></figure>
+        </aside>
+        <aside class="lightbox" id="archivo-acceso">
+          <a class="lightbox-backdrop" href="#archivo" aria-label="Cerrar imagen"></a>
+          <figure><a class="lightbox-close" href="#archivo" aria-label="Cerrar imagen">Cerrar</a><img src="public/archive/acceso-palacio-1915.jpg" alt="Acceso al palacio" /><figcaption><strong>Acceso al palacio</strong><span>Cercanía, escala y ornamentación del acceso principal.</span></figcaption></figure>
+        </aside>
+        <aside class="lightbox" id="archivo-jardines">
+          <a class="lightbox-backdrop" href="#archivo" aria-label="Cerrar imagen"></a>
+          <figure><a class="lightbox-close" href="#archivo" aria-label="Cerrar imagen">Cerrar</a><img src="public/archive/jardines-palacio-1915.jpg" alt="Jardines principales" /><figcaption><strong>Jardines principales</strong><span>Áreas exteriores asociadas al paseo, la representación y el paisaje.</span></figcaption></figure>
+        </aside>
+        <aside class="lightbox" id="archivo-parrones">
+          <a class="lightbox-backdrop" href="#archivo" aria-label="Cerrar imagen"></a>
+          <figure><a class="lightbox-close" href="#archivo" aria-label="Cerrar imagen">Cerrar</a><img src="public/archive/parrones-palacio.jpg" alt="Parrones interiores" /><figcaption><strong>Parrones interiores</strong><span>Ambiente doméstico, productivo y de sociabilidad cotidiana.</span></figcaption></figure>
+        </aside>
+        <aside class="lightbox" id="archivo-misiones">
+          <a class="lightbox-backdrop" href="#archivo" aria-label="Cerrar imagen"></a>
+          <figure><a class="lightbox-close" href="#archivo" aria-label="Cerrar imagen">Cerrar</a><img src="public/archive/misiones-religiosas-palacio.jpg" alt="Misiones religiosas" /><figcaption><strong>Misiones religiosas</strong><span>Actividades religiosas realizadas para la comunidad de San Felipe.</span></figcaption></figure>
+        </aside>
+        <aside class="lightbox" id="archivo-familia">
+          <a class="lightbox-backdrop" href="#archivo" aria-label="Cerrar imagen"></a>
+          <figure><a class="lightbox-close" href="#archivo" aria-label="Cerrar imagen">Cerrar</a><img src="public/archive/retrato-familiar-duenos-1915.jpg" alt="Retrato familiar" /><figcaption><strong>Retrato familiar</strong><span>Registro familiar realizado dentro del palacio, año 1915.</span></figcaption></figure>
+        </aside>
       </section>
 
       <section class="section muted" id="linea-tiempo">
@@ -141,66 +177,66 @@
         <ol class="timeline">
           <li>
             <div class="timeline-rail"><span>01</span></div>
-            <div class="timeline-card">
-              <div class="timeline-meta"><span>Origen territorial</span><time>1740</time></div>
-              <div><h3>Fundación de San Felipe el Real</h3><p>El Valle del Aconcagua se consolida como territorio agrícola y ganadero, con haciendas que articulan producción, vivienda, servicios y vida comunitaria.</p></div>
-            </div>
+            <details class="timeline-card" open>
+              <summary><div class="timeline-meta"><span>Origen territorial</span><time>1740</time></div><div><h3>Fundación de San Felipe el Real</h3><span class="timeline-toggle" aria-hidden="true"></span></div></summary>
+              <div class="timeline-detail"><p>El Valle del Aconcagua se consolida como territorio agrícola y ganadero, con haciendas que articulan producción, vivienda, servicios y vida comunitaria.</p></div>
+            </details>
           </li>
           <li>
             <div class="timeline-rail"><span>02</span></div>
-            <div class="timeline-card">
-              <div class="timeline-meta"><span>Paisaje hacendal</span><time>Siglo XIX</time></div>
-              <div><h3>Consolidación de las haciendas</h3><p>Propiedades como Lo Vicuña, El Tártaro y Quilpué fortalecen el prestigio social y económico de sus propietarios y configuran el paisaje rural regional.</p></div>
-            </div>
+            <details class="timeline-card" open>
+              <summary><div class="timeline-meta"><span>Paisaje hacendal</span><time>Siglo XIX</time></div><div><h3>Consolidación de las haciendas</h3><span class="timeline-toggle" aria-hidden="true"></span></div></summary>
+              <div class="timeline-detail"><p>Propiedades como Lo Vicuña, El Tártaro y Quilpué fortalecen el prestigio social y económico de sus propietarios y configuran el paisaje rural regional.</p></div>
+            </details>
           </li>
           <li>
             <div class="timeline-rail"><span>03</span></div>
-            <div class="timeline-card">
-              <div class="timeline-meta"><span>Familia y beneficencia</span><time>1830</time></div>
-              <div><h3>Nacimiento de Juana Ross Edwards</h3><p>Nace una figura central para la historia del palacio, reconocida por su vocación religiosa, filantrópica y de servicio social.</p></div>
-            </div>
+            <details class="timeline-card" open>
+              <summary><div class="timeline-meta"><span>Familia y beneficencia</span><time>1830</time></div><div><h3>Nacimiento de Juana Ross Edwards</h3><span class="timeline-toggle" aria-hidden="true"></span></div></summary>
+              <div class="timeline-detail"><p>Nace una figura central para la historia del palacio, reconocida por su vocación religiosa, filantrópica y de servicio social.</p></div>
+            </details>
           </li>
           <li>
             <div class="timeline-rail"><span>04</span></div>
-            <div class="timeline-card">
-              <div class="timeline-meta"><span>Proyecto arquitectónico</span><time>1866-1880</time></div>
-              <div><h3>Construcción del Palacio Hacienda Quilpué</h3><p>Juan Eduardo Fehrman proyecta una residencia de inspiración francesa, excepcional para el contexto rural del Valle del Aconcagua.</p></div>
-            </div>
+            <details class="timeline-card">
+              <summary><div class="timeline-meta"><span>Proyecto arquitectónico</span><time>1866-1880</time></div><div><h3>Construcción del Palacio Hacienda Quilpué</h3><span class="timeline-toggle" aria-hidden="true"></span></div></summary>
+              <div class="timeline-detail"><p>Juan Eduardo Fehrman proyecta una residencia de inspiración francesa, excepcional para el contexto rural del Valle del Aconcagua.</p></div>
+            </details>
           </li>
           <li>
             <div class="timeline-rail"><span>05</span></div>
-            <div class="timeline-card">
-              <div class="timeline-meta"><span>Crisis sanitaria</span><time>1886-1888</time></div>
-              <div><h3>Epidemia del cólera</h3><p>Juana Ross organiza ayuda sanitaria y social mediante lazaretos, alimentos, ropa, medicamentos y atención para trabajadores e inquilinos.</p></div>
-            </div>
+            <details class="timeline-card">
+              <summary><div class="timeline-meta"><span>Crisis sanitaria</span><time>1886-1888</time></div><div><h3>Epidemia del cólera</h3><span class="timeline-toggle" aria-hidden="true"></span></div></summary>
+              <div class="timeline-detail"><p>Juana Ross organiza ayuda sanitaria y social mediante lazaretos, alimentos, ropa, medicamentos y atención para trabajadores e inquilinos.</p></div>
+            </details>
           </li>
           <li>
             <div class="timeline-rail"><span>06</span></div>
-            <div class="timeline-card">
-              <div class="timeline-meta"><span>Reconocimiento social</span><time>Siglo XX</time></div>
-              <div><h3>Esplendor del palacio</h3><p>La residencia recibe visitas internacionales y consolida su imagen pública como el “Versalles Chileno”.</p></div>
-            </div>
+            <details class="timeline-card">
+              <summary><div class="timeline-meta"><span>Reconocimiento social</span><time>Siglo XX</time></div><div><h3>Esplendor del palacio</h3><span class="timeline-toggle" aria-hidden="true"></span></div></summary>
+              <div class="timeline-detail"><p>La residencia recibe visitas internacionales y consolida su imagen pública como el “Versalles Chileno”.</p></div>
+            </details>
           </li>
           <li>
             <div class="timeline-rail"><span>07</span></div>
-            <div class="timeline-card">
-              <div class="timeline-meta"><span>Transformación institucional</span><time>1967-1973</time></div>
-              <div><h3>Traspaso, reforma agraria y proyecto universitario</h3><p>La propiedad pasa al Estado de Chile y se proyecta como centro de formación para Agronomía, iniciativa interrumpida en 1973.</p></div>
-            </div>
+            <details class="timeline-card">
+              <summary><div class="timeline-meta"><span>Transformación institucional</span><time>1967-1973</time></div><div><h3>Traspaso, reforma agraria y proyecto universitario</h3><span class="timeline-toggle" aria-hidden="true"></span></div></summary>
+              <div class="timeline-detail"><p>La propiedad pasa al Estado de Chile y se proyecta como centro de formación para Agronomía, iniciativa interrumpida en 1973.</p></div>
+            </details>
           </li>
           <li>
             <div class="timeline-rail"><span>08</span></div>
-            <div class="timeline-card">
-              <div class="timeline-meta"><span>Deterioro material</span><time>1985</time></div>
-              <div><h3>Demolición parcial</h3><p>Tras daños estructurales se retiran techumbre, chimeneas y parte de la estructura interior; luego desaparecen pisos, vigas, pilares y mobiliario.</p></div>
-            </div>
+            <details class="timeline-card">
+              <summary><div class="timeline-meta"><span>Deterioro material</span><time>1985</time></div><div><h3>Demolición parcial</h3><span class="timeline-toggle" aria-hidden="true"></span></div></summary>
+              <div class="timeline-detail"><p>Tras daños estructurales se retiran techumbre, chimeneas y parte de la estructura interior; luego desaparecen pisos, vigas, pilares y mobiliario.</p></div>
+            </details>
           </li>
           <li>
             <div class="timeline-rail"><span>09</span></div>
-            <div class="timeline-card">
-              <div class="timeline-meta"><span>Memoria vigente</span><time>Actualidad</time></div>
-              <div><h3>Ruinas, memoria y actividades culturales</h3><p>Las ruinas permanecen como testimonio patrimonial de San Felipe y del Valle del Aconcagua, acogiendo algunas actividades culturales.</p></div>
-            </div>
+            <details class="timeline-card">
+              <summary><div class="timeline-meta"><span>Memoria vigente</span><time>Actualidad</time></div><div><h3>Ruinas, memoria y actividades culturales</h3><span class="timeline-toggle" aria-hidden="true"></span></div></summary>
+              <div class="timeline-detail"><p>Las ruinas permanecen como testimonio patrimonial de San Felipe y del Valle del Aconcagua, acogiendo algunas actividades culturales.</p></div>
+            </details>
           </li>
         </ol>
       </section>

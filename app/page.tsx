@@ -86,41 +86,49 @@ const memoryItems = [
 
 const archiveItems = [
   {
+    id: "fachada",
     src: "/archive/hero-palacio-1915.jpg",
     title: "Parte delantera del palacio",
     caption: "Registro histórico del frente del Palacio Hacienda Quilpué, 1915.",
   },
   {
+    id: "acceso",
     src: "/archive/acceso-palacio-1915.jpg",
     title: "Acceso al palacio",
     caption: "Cercanía, escala y ornamentación del acceso principal, año 1915.",
   },
   {
+    id: "comunidad",
     src: "/archive/acceso-comunidad-1915.jpg",
     title: "Acceso y comunidad",
     caption: "Grupo reunido junto al acceso, evidencia de la vida social del recinto.",
   },
   {
+    id: "jardines",
     src: "/archive/jardines-palacio-1915.jpg",
     title: "Jardines principales",
     caption: "Áreas exteriores asociadas al paseo, la representación y el paisaje.",
   },
   {
+    id: "parrones",
     src: "/archive/parrones-palacio.jpg",
     title: "Parrones interiores",
     caption: "Imagen de los parrones como parte del ambiente doméstico y productivo.",
   },
   {
+    id: "misiones",
     src: "/archive/misiones-religiosas-palacio.jpg",
     title: "Misiones religiosas",
     caption: "Actividades religiosas realizadas para la comunidad de San Felipe.",
   },
   {
+    id: "familia",
     src: "/archive/retrato-familiar-duenos-1915.jpg",
     title: "Retrato familiar",
     caption: "Registro familiar realizado dentro del palacio, año 1915.",
   },
   {
+    id: "infancias",
     src: "/archive/retrato-familiar-hijos-1915.jpg",
     title: "Infancias en el palacio",
     caption: "Retrato de hijos de propietarios, vinculado a la vida cotidiana del lugar.",
@@ -219,12 +227,35 @@ export default function Home() {
         <div className="archive-grid">
           {archiveItems.map((item) => (
             <figure className="archive-card" key={item.src}>
-              <img src={item.src} alt={item.title} />
+              <a href={`#archivo-${item.id}`}>
+                <img src={item.src} alt={item.title} />
+              </a>
               <figcaption>
                 <strong>{item.title}</strong>
                 <span>{item.caption}</span>
               </figcaption>
             </figure>
+          ))}
+        </div>
+        <div className="lightbox-collection" aria-label="Vista ampliada del archivo">
+          {archiveItems.map((item) => (
+            <aside
+              className="lightbox"
+              id={`archivo-${item.id}`}
+              key={`lightbox-${item.id}`}
+            >
+              <a className="lightbox-backdrop" href="#archivo" aria-label="Cerrar imagen" />
+              <figure>
+                <a className="lightbox-close" href="#archivo" aria-label="Cerrar imagen">
+                  Cerrar
+                </a>
+                <img src={item.src} alt={item.title} />
+                <figcaption>
+                  <strong>{item.title}</strong>
+                  <span>{item.caption}</span>
+                </figcaption>
+              </figure>
+            </aside>
           ))}
         </div>
       </section>
@@ -246,16 +277,21 @@ export default function Home() {
               <div className="timeline-rail" aria-hidden="true">
                 <span>{String(index + 1).padStart(2, "0")}</span>
               </div>
-              <div className="timeline-card">
-                <div className="timeline-meta">
-                  <span>{item.phase}</span>
-                  <time>{item.period}</time>
-                </div>
-                <div>
-                  <h3>{item.title}</h3>
+              <details className="timeline-card" open={index < 3}>
+                <summary>
+                  <div className="timeline-meta">
+                    <span>{item.phase}</span>
+                    <time>{item.period}</time>
+                  </div>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <span className="timeline-toggle" aria-hidden="true" />
+                  </div>
+                </summary>
+                <div className="timeline-detail">
                   <p>{item.text}</p>
                 </div>
-              </div>
+              </details>
             </li>
           ))}
         </ol>

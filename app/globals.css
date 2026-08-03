@@ -283,13 +283,25 @@ h3 {
   overflow: hidden;
 }
 
+.archive-card a {
+  cursor: zoom-in;
+  display: block;
+  overflow: hidden;
+}
+
 .archive-card img {
   aspect-ratio: 4 / 3;
   display: block;
   filter: sepia(0.08) contrast(1.03);
   height: auto;
   object-fit: cover;
+  transition: filter 180ms ease, transform 180ms ease;
   width: 100%;
+}
+
+.archive-card:hover img {
+  filter: sepia(0.03) contrast(1.08);
+  transform: scale(1.035);
 }
 
 .archive-card figcaption {
@@ -309,6 +321,76 @@ h3 {
   color: var(--muted-ink);
   font-size: 14px;
   line-height: 1.45;
+}
+
+.lightbox {
+  align-items: center;
+  background: rgba(31, 38, 36, 0.78);
+  display: none;
+  inset: 0;
+  justify-content: center;
+  padding: clamp(18px, 5vw, 64px);
+  position: fixed;
+  z-index: 30;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox-backdrop {
+  cursor: zoom-out;
+  inset: 0;
+  position: absolute;
+}
+
+.lightbox figure {
+  background: var(--panel);
+  border: 1px solid rgba(255, 250, 242, 0.32);
+  border-radius: 8px;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.32);
+  margin: 0;
+  max-height: 88vh;
+  max-width: min(1040px, 92vw);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.lightbox img {
+  display: block;
+  max-height: 68vh;
+  object-fit: contain;
+  width: 100%;
+}
+
+.lightbox figcaption {
+  display: grid;
+  gap: 6px;
+  padding: 18px 22px 22px;
+}
+
+.lightbox figcaption strong {
+  color: var(--blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+}
+
+.lightbox figcaption span {
+  color: var(--muted-ink);
+}
+
+.lightbox-close {
+  background: rgba(31, 38, 36, 0.9);
+  border-radius: 4px;
+  color: #fffaf2;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 9px 12px;
+  position: absolute;
+  right: 14px;
+  text-transform: uppercase;
+  top: 14px;
 }
 
 .timeline {
@@ -368,9 +450,6 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 18px 42px rgba(31, 38, 36, 0.08);
-  display: grid;
-  gap: 22px;
-  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
   padding: clamp(22px, 4vw, 34px);
 }
 
@@ -378,6 +457,18 @@ h3 {
   border-color: rgba(138, 63, 45, 0.45);
   transform: translateY(-2px);
   transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.timeline-card summary {
+  cursor: pointer;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  list-style: none;
+}
+
+.timeline-card summary::-webkit-details-marker {
+  display: none;
 }
 
 .timeline-meta {
@@ -403,7 +494,42 @@ h3 {
 
 .timeline p {
   color: var(--muted-ink);
-  margin-top: 8px;
+}
+
+.timeline-detail {
+  border-top: 1px solid var(--line);
+  margin-top: 22px;
+  padding-top: 18px;
+}
+
+.timeline-toggle {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  display: inline-flex;
+  height: 34px;
+  justify-content: center;
+  margin-top: 16px;
+  position: relative;
+  width: 34px;
+}
+
+.timeline-toggle::before,
+.timeline-toggle::after {
+  background: var(--clay);
+  content: "";
+  height: 2px;
+  position: absolute;
+  width: 12px;
+}
+
+.timeline-toggle::after {
+  transform: rotate(90deg);
+  transition: transform 160ms ease;
+}
+
+.timeline-card[open] .timeline-toggle::after {
+  transform: rotate(0deg);
 }
 
 .feature-grid {
@@ -601,6 +727,10 @@ h3 {
   .timeline-card {
     grid-template-columns: 1fr;
   }
+
+  .timeline-card summary {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
@@ -642,5 +772,22 @@ h3 {
   .quote-band {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .archive-card img,
+  .timeline-card,
+  .timeline-toggle::after {
+    transition: none;
+  }
+
+  .archive-card:hover img,
+  .timeline-card:hover {
+    transform: none;
   }
 }

@@ -1,457 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacienda Quilpué | Magíster en Patrimonio UV</title>
-    <meta name="description"
-        content="Investigación de Magíster en Patrimonio UV sobre la puesta en valor del Palacio Hacienda de Quilpué en la provincia de San Felipe.">
-    <meta name="keywords"
-        content="patrimonio, hacienda, quilpué, conservación, arquitectura, san felipe, universidad de valparaíso">
-    <meta name="author" content="Almendra Zuleta Díaz">
-    <meta property="og:title" content="Hacienda Quilpué | Patrimonio y Memoria">
-    <meta property="og:description" content="Estudio crítico sobre la puesta en valor del Palacio Hacienda de Quilpué.">
-    <meta property="og:type" content="website">
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
-    <link rel="stylesheet" href="styles.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-    <!-- Reading Progress Bar -->
-    <div class="reading-progress" id="readingProgress"></div>
-
-    <!-- Skip to Content -->
-    <a href="#inicio" class="skip-link">Saltar al contenido</a>
-    <!-- Premium Navigation -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav-brand">
-                <div class="nav-logos">
-                    <img src="logo_UV.png" alt="Logo Universidad de Valparaíso" class="nav-logo-img">
-                    <img src="LOGO_Postgrado_UV.png" alt="Logo Postgrado UV" class="nav-logo-img">
-                </div>
-                <div class="nav-titles">
-                    <span class="nav-title">Hacienda Quilpué</span>
-                    <span class="nav-subtitle">Magíster en Patrimonio UV</span>
-                </div>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                <li><a href="#historia" class="nav-link">Historia</a></li>
-                <li><a href="#archivo" class="nav-link">Archivo</a></li>
-                <li><a href="#marco" class="nav-link">Marco Teórico</a></li>
-                <li><a href="#cronologia" class="nav-link">Cronología</a></li>
-                <li><a href="#arquitectura" class="nav-link">Arquitectura</a></li>
-                <li><a href="#ubicacion" class="nav-link">Geografía</a></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Palacio Hacienda Quilpué | Almendra Zuleta Díaz</title>
+    <meta
+      name="description"
+      content="Ruta de la memoria por las ruinas del Palacio Hacienda Quilpué, investigación patrimonial de Almendra Zuleta Díaz para el Magíster en Patrimonio."
+    />
+    <meta property="og:title" content="Palacio Hacienda Quilpué | Almendra Zuleta Díaz" />
+    <meta
+      property="og:description"
+      content="Ruta de la memoria por las ruinas del Palacio Hacienda Quilpué."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="public/og.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="site-header" aria-label="Navegación principal">
+        <a class="brand" href="#inicio">
+          <span class="brand-logos">
+            <img src="public/archive/logo-uv.png" alt="Universidad de Valparaíso" />
+            <img src="public/archive/logo-postgrado-uv.png" alt="Postgrado UV" />
+          </span>
+          <span>Palacio Hacienda Quilpué</span>
+        </a>
+        <nav>
+          <a href="#patrimonio">Patrimonio</a>
+          <a href="#archivo">Archivo</a>
+          <a href="#linea-tiempo">Línea de tiempo</a>
+          <a href="#palacio">El palacio</a>
+          <a href="#ruinas">Las ruinas</a>
+          <a href="#fuentes">Fuentes</a>
         </nav>
-    </header>
+      </header>
 
-    <!-- Hero Section with Motion -->
-    <section class="hero" id="inicio">
-        <div class="hero-overlay"></div>
-        <div class="hero-content container">
-            <div class="badge">Investigación de Postgrado</div>
-            <h1 class="hero-title">Patrimonio y Memoria</h1>
-            <p class="hero-subtitle">Estudio crítico sobre la puesta en valor del Palacio Hacienda de Quilpué en la
-                provincia de San Felipe.</p>
-            <div class="hero-credits">
-                <span>Investigadora: <strong>Almendra Zuleta Díaz</strong></span>
-                <span class="inst">Universidad de Valparaíso</span>
-            </div>
-            <a href="#marco" class="btn btn-primary">Iniciar Recorrido Académico</a>
+      <section class="hero" id="inicio">
+        <div class="hero-content">
+          <p class="eyebrow">Ruta de la memoria por las ruinas</p>
+          <h1>Palacio Hacienda Quilpué</h1>
+          <p class="hero-lead">
+            Investigación patrimonial sobre el antiguo “Versalles Chileno”, su arquitectura,
+            vida hacendal, transformaciones históricas y vigencia como espacio de memoria en
+            San Felipe.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#patrimonio">Comenzar el recorrido</a>
+            <span>Almendra Zuleta Díaz · Magíster en Patrimonio</span>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Historia Section -->
-    <section class="history-intro section" id="historia">
-        <div class="container">
-            <h2 class="section-label" data-reveal>Legado y Origen</h2>
-            <div class="history-grid">
-                <div class="history-sidebar" data-reveal>
-                    <div class="portrait-frame">
-                        <img src="Vieja Juana.jpeg" alt="Retrato de Juana Ross">
-                    </div>
-                    <div class="history-meta">
-                        <h3>Juana Ross de Edwards</h3>
-                        <p class="role">Fundadora y Visionaria</p>
-                        <hr>
-                        <p class="quote">"Una de las mujeres más influyentes del siglo XIX, cuya visión dio vida a este ícono arquitectónico."</p>
-                    </div>
-                </div>
-                <div class="history-content" data-reveal>
-                    <div class="history-block">
-                        <span class="block-number">01</span>
-                        <h3>Construcción</h3>
-                        <p>Doña Juana Ross de Edwards, encargó la construcción de este palacio a fines del siglo XIX para que fuera su residencia de verano. Ella deseaba que el Palacio fuera una construcción nunca antes vista en Latinoamérica, por lo que buscó a grandes arquitectos de la época para llevar a cabo su visión.</p>
-                        <p>Se sabe que los planos del palacio fueron basados en el Palacio de Versalles en Francia, de ahí su imponente estructura y la belleza de sus detalles arquitectónicos y jardines.</p>
-                    </div>
-                    <div class="history-block">
-                        <span class="block-number">02</span>
-                        <h3>Dato Curioso</h3>
-                        <p>Se cuenta por los pobladores del lugar que el palacio contaba con un total de 102 habitaciones, lo cual lo convertía en una de las construcciones más grandes de la época.</p>
-                    </div>
-                    <div class="history-visuals">
-                        <div class="visual-item" data-reveal>
-                            <img src="WhatsApp Image 2026-03-06 at 10.18.23 PM.jpeg" alt="Palacio año 1922">
-                            <div class="visual-caption">
-                                <strong>Fotografía Histórica</strong>
-                                <span>Año 1922 del Palacio</span>
-                            </div>
-                        </div>
-                        <div class="visual-item" data-reveal>
-                            <img src="WhatsApp Image 2026-03-06 at 10.18.24 PM.jpeg" alt="Fiesta de la vendimia">
-                            <div class="visual-caption">
-                                <strong>Fiesta de la vendimia</strong>
-                                <span>Tradición en el Palacio</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <section class="intro-band" aria-label="Datos del proyecto">
+        <div>
+          <span class="label">Autora</span>
+          <strong>Almendra Zuleta Díaz</strong>
         </div>
-    </section>
-
-    <!-- Archivo Histórico Section -->
-    <section class="epoch-gallery section" id="archivo">
-        <div class="container">
-            <h2 class="section-title">Archivo Histórico</h2>
-            <p style="text-align: center; opacity: 0.7; margin-bottom: 40px;">Registro visual de la Hacienda de Quilpué (1915-1922)</p>
-            
-            <div class="epoch-grid">
-                <!-- Screenshot 2 Items -->
-                <div class="epoch-item" data-reveal>
-                    <img src="Acceso al Palacio, año 1915.jpeg" class="epoch-image" alt="Acceso al Palacio">
-                    <div class="epoch-caption">
-                        <strong>Acceso al Palacio</strong>
-                        <span>año 1915</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Parte_delantera_palacio_1915.jpeg" class="epoch-image" alt="Parte delantera">
-                    <div class="epoch-caption">
-                        <strong>Parte delantera</strong>
-                        <span>año 1915</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Acceso_palacio_1915.jpeg" class="epoch-image" alt="Acceso al Palacio">
-                    <div class="epoch-caption">
-                        <strong>Acceso al Palacio</strong>
-                        <span>año 1915</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Cercado original del Palacio año 1915 1916.jpeg" class="epoch-image" alt="Cercado original">
-                    <div class="epoch-caption">
-                        <strong>Cercado original</strong>
-                        <span>año 1915/1916</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Misiones religiosas realizadas dentro del Palacio, para la comunidad de San Felipe.jpeg" class="epoch-image" alt="Misiones religiosas">
-                    <div class="epoch-caption">
-                        <strong>Misiones religiosas</strong>
-                        <span>Realizadas dentro del Palacio por la Congregación de las Hijas de María.</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Misiones religiosas realizadas dentro del Palacio, para la comunidad de San Felipe..jpeg" class="epoch-image" alt="Misiones religiosas">
-                    <div class="epoch-caption">
-                        <strong>Misiones religiosas</strong>
-                        <span>Realizadas dentro del Palacio por la Congregación de las Hijas de María.</span>
-                    </div>
-                </div>
-                <!-- Screenshot 1 Items -->
-                <div class="epoch-item" data-reveal>
-                    <img src="Retrato familiar, dueños del Palacio de la Hacienda Quilpué, año 1915.jpeg" class="epoch-image" alt="Retrato dueños">
-                    <div class="epoch-caption">
-                        <strong>Retrato familiar</strong>
-                        <span>Realizado dentro del palacio (dueños).</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Retrato familiar, dueños del Palacio de la Hacienda Quilpué, año 1915 (2).jpeg" class="epoch-image" alt="Retrato dueños">
-                    <div class="epoch-caption">
-                        <strong>Retrato familiar</strong>
-                        <span>Realizado dentro del palacio (dueños).</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Retrato familiar, hijos de dueños del Palacio de la Hacienda Quilpué, año 1915.jpeg" class="epoch-image" alt="Retrato hijos">
-                    <div class="epoch-caption">
-                        <strong>Retrato familiar</strong>
-                        <span>Realizado dentro del palacio (hijos).</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Corrales de caballos dentro del Palacio, año 1915.jpeg" class="epoch-image" alt="Corrales corredores">
-                    <div class="epoch-caption">
-                        <strong>Corrales de caballos</strong>
-                        <span>Caballos de palacio (corredores).</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Parrones dentro del Palacio.jpeg" class="epoch-image" alt="Parrones">
-                    <div class="epoch-caption">
-                        <strong>Parrones</strong>
-                        <span>Detalle de los parrones dentro del Palacio.</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Jardines principales del Palacio, año 1915.jpeg" class="epoch-image" alt="Jardines">
-                    <div class="epoch-caption">
-                        <strong>Jardines principales</strong>
-                        <span>Exploración de los jardines exteriores.</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Jardines principales del Palacio, año 1915 (2).jpeg" class="epoch-image" alt="Jardines">
-                    <div class="epoch-caption">
-                        <strong>Jardines principales</strong>
-                        <span>Vista panorámica de los jardines.</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Corrales de caballos dentro del Palacio, año 1915 (2).jpeg" class="epoch-image" alt="Corrales">
-                    <div class="epoch-caption">
-                        <strong>Corrales de caballos</strong>
-                        <span>Área de caballerizas del Palacio.</span>
-                    </div>
-                </div>
-                <div class="epoch-item" data-reveal>
-                    <img src="Hora del té dentro de la terraza exterior del Palacio, año 1915.jpeg" class="epoch-image" alt="Hora del té">
-                    <div class="epoch-caption">
-                        <strong>Hora del té</strong>
-                        <span>Terraza exterior del Palacio.</span>
-                    </div>
-                </div>
-            </div>
+        <div>
+          <span class="label">Programa</span>
+          <strong>Magíster en Patrimonio, Universidad de Valparaíso</strong>
         </div>
-    </section>
-
-    <!-- Marco Teórico Section -->
-    <section class="marco section" id="marco">
-        <div class="container">
-            <div class="marco-grid">
-                <div class="marco-text" data-reveal>
-                    <h2 class="section-label">Marco Conceptual</h2>
-                    <h3 class="display-title">Puesta en Valor y Conservación</h3>
-                    <p>La investigación se sitúa bajo el paradigma de la conservación integral, entendiendo el monumento
-                        no como un objeto aislado, sino como un nodo de significación cultural en el Valle de Aconcagua.
-                    </p>
-                    <div class="quote-box">
-                        <blockquote>"El patrimonio no es solo lo que heredamos, sino lo que decidimos mantener vivo para
-                            el futuro."</blockquote>
-                    </div>
-                </div>
-                <div class="marco-image" data-reveal>
-                    <div class="glass-container">
-                        <img src="WhatsApp Image 2026-03-06 at 10.18.24 PM (6).jpeg"
-                            alt="Detalle de columnas neoclásicas en galerías" loading="lazy">
-                    </div>
-                </div>
-            </div>
+        <div>
+          <span class="label">Caso de estudio</span>
+          <strong>Ruinas del Palacio Hacienda Quilpué, San Felipe</strong>
         </div>
-    </section>
+      </section>
 
-    <!-- Timeline Section -->
-    <section class="cronologia section" id="cronologia">
-        <div class="container">
-            <h2 class="section-title">Evolución Histórica</h2>
-            <div class="timeline">
-                <div class="timeline-item" data-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="year">18XX</span>
-                        <h4>Fundación y Auge</h4>
-                        <p>Construcción de la casona principal como centro de administración hacendal y residencia de la
-                            élite local.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="year">19XX</span>
-                        <h4>Transformación Rural</h4>
-                        <p>Consolidación de la actividad vitivinícola y agrícola, convirtiéndose en un motor económico
-                            regional.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="year">Hoy</span>
-                        <h4>Estado de Ruina y Memoria</h4>
-                        <p>Evaluación actual de las estructuras y propuestas de salvaguarda bajo criterios de patrimonio
-                            nacional.</p>
-                    </div>
-                </div>
-            </div>
+      <section class="section" id="patrimonio">
+        <div class="section-heading">
+          <p class="eyebrow">Marco conceptual</p>
+          <h2>¿Qué es patrimonio?</h2>
         </div>
-    </section>
-
-    <!-- Arquitectura Section -->
-    <section class="architecture section" id="arquitectura">
-        <div class="container">
-            <h2 class="section-title">Análisis de Estructuras</h2>
-            <div class="architecture-grid">
-                <div class="glass-card arch-card" data-reveal>
-                    <div class="arch-number">01</div>
-                    <h3>Tipología</h3>
-                    <p>Planta en 'C' con galerías perimetrales, característica de la tipología de casa patronal chilena.
-                    </p>
-                </div>
-                <div class="glass-card arch-card" data-reveal>
-                    <div class="arch-number">02</div>
-                    <h3>Sistemas</h3>
-                    <p>Muros de adobe de gran espesor y techumbres de teja natural sobre viguería de madera nativa.</p>
-                </div>
-                <div class="glass-card arch-card" data-reveal>
-                    <div class="arch-number">03</div>
-                    <h3>Ornamento</h3>
-                    <p>Influencias neoclásicas en pilastras, frontones y detalles de carpintería fina.</p>
-                </div>
-            </div>
+        <div class="two-column">
+          <p>
+            El patrimonio corresponde al conjunto de bienes, lugares, tradiciones y
+            conocimientos que una comunidad reconoce como parte de su historia e identidad.
+            No se limita a lo monumental: también integra memorias, vínculos sociales,
+            prácticas cotidianas y modos de habitar un territorio.
+          </p>
+          <p>
+            En el caso del Palacio Hacienda Quilpué, el valor patrimonial se expresa tanto
+            en la arquitectura remanente como en las historias asociadas al trabajo rural,
+            la familia Edwards Ross, la transformación de las haciendas y la memoria actual
+            de San Felipe.
+          </p>
         </div>
-    </section>
+      </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery section" id="galeria">
-        <div class="container">
-            <h2 class="section-title">Registro Fotográfico</h2>
-            <div class="gallery-grid" id="galleryGrid">
-                <div class="gallery-item large" data-reveal>
-                    <img src="WhatsApp Image 2026-03-06 at 10.18.23 PM.jpeg"
-                        alt="Fachada principal de la Hacienda Quilpué - Vista frontal" loading="lazy">
-                    <div class="gallery-overlay"><span>Fachada Principal</span></div>
-                </div>
-                <div class="gallery-item" data-reveal>
-                    <img src="WhatsApp Image 2026-03-06 at 10.18.24 PM (1).jpeg"
-                        alt="Detalle arquitectónico de columnas" loading="lazy">
-                    <div class="gallery-overlay"><span>Columnas</span></div>
-                </div>
-                <div class="gallery-item" data-reveal>
-                    <img src="WhatsApp Image 2026-03-06 at 10.18.24 PM (2).jpeg" alt="Patio interior de la hacienda"
-                        loading="lazy">
-                    <div class="gallery-overlay"><span>Patio Interior</span></div>
-                </div>
-                <div class="gallery-item" data-reveal>
-                    <img src="WhatsApp Image 2026-03-06 at 10.18.24 PM (3).jpeg"
-                        alt="Bodegas de producción vitivinícola" loading="lazy">
-                    <div class="gallery-overlay"><span>Bodegas</span></div>
-                </div>
-                <div class="gallery-item" data-reveal>
-                    <img src="WhatsApp Image 2026-03-06 at 10.18.24 PM (6).jpeg" alt="Detalle de galerías perimetrales"
-                        loading="lazy">
-                    <div class="gallery-overlay"><span>Galerías</span></div>
-                </div>
-                <div class="gallery-item" data-reveal>
-                    <img src="WhatsApp Image 2026-03-06 at 10.18.24 PM (7).jpeg" alt="Escaleras de acceso principal"
-                        loading="lazy">
-                    <div class="gallery-overlay"><span>Escaleras</span></div>
-                </div>
-                <div class="gallery-item" data-reveal>
-                    <img src="WhatsApp Image 2026-03-06 at 10.18.24 PM (10).jpeg" alt="Espacios de producción agrícola"
-                        loading="lazy">
-                    <div class="gallery-overlay"><span>Producción</span></div>
-                </div>
-                <div class="gallery-item" data-reveal>
-                    <img src="WhatsApp Image 2026-03-06 at 10.18.24 PM (11).jpeg" alt="Vista panorámica del entorno"
-                        loading="lazy">
-                    <div class="gallery-overlay"><span>Entorno</span></div>
-                </div>
-            </div>
+      <section class="section archive-section" id="archivo">
+        <div class="section-heading wide">
+          <p class="eyebrow">Archivo visual</p>
+          <h2>Imágenes históricas del palacio</h2>
+          <p>
+            Registros fotográficos asociados al periodo de esplendor del inmueble permiten
+            observar el acceso, la fachada, los jardines, la sociabilidad familiar y las
+            prácticas religiosas vinculadas al recinto.
+          </p>
         </div>
-    </section>
-
-    <!-- Ubicación Section -->
-    <section class="location section" id="ubicacion">
-        <div class="container">
-            <h2 class="section-title">Territorio y Paisaje</h2>
-            <div class="location-content">
-                <div class="location-text" data-reveal>
-                    <div class="info-group">
-                        <h3>Contexto Geográfico</h3>
-                        <p>La Hacienda de Quilpué se emplaza estratégicamente en el valle fluvial, aprovechando la
-                            conectividad histórica entre los centros urbanos y la zona rural.</p>
-                    </div>
-                    <div class="map-directions glass-card">
-                        <h4>Guía de Trabajo en Terreno</h4>
-                        <ul class="academic-steps">
-                            <li><strong>Punto de Partida:</strong> Plaza de Armas, San Felipe.</li>
-                            <li><strong>Ruta Principal:</strong> Eje Salinas - Abraham Ahumada.</li>
-                            <li><strong>Hito de Referencia:</strong> Puente Las Casas de Quilpué y zona de feria.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="location-map" data-reveal>
-                    <div class="map-frame">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3369.3470764121703!2d-70.7169438235216!3d-32.74312686151624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96881bc3763f0d57%3A0xe5a3c267c746da9d!2sCastillo%20hacienda%20quilpue!5e0!3m2!1ses!2scl!4v1710258123456!5m2!1ses!2scl"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
+        <div class="archive-grid">
+          <figure class="archive-card">
+            <img src="public/archive/hero-palacio-1915.jpg" alt="Parte delantera del palacio" />
+            <figcaption><strong>Parte delantera</strong><span>Registro histórico del frente del Palacio Hacienda Quilpué, 1915.</span></figcaption>
+          </figure>
+          <figure class="archive-card">
+            <img src="public/archive/acceso-palacio-1915.jpg" alt="Acceso al palacio" />
+            <figcaption><strong>Acceso al palacio</strong><span>Cercanía, escala y ornamentación del acceso principal.</span></figcaption>
+          </figure>
+          <figure class="archive-card">
+            <img src="public/archive/jardines-palacio-1915.jpg" alt="Jardines principales" />
+            <figcaption><strong>Jardines principales</strong><span>Áreas exteriores asociadas al paseo, la representación y el paisaje.</span></figcaption>
+          </figure>
+          <figure class="archive-card">
+            <img src="public/archive/parrones-palacio.jpg" alt="Parrones interiores" />
+            <figcaption><strong>Parrones interiores</strong><span>Ambiente doméstico, productivo y de sociabilidad cotidiana.</span></figcaption>
+          </figure>
+          <figure class="archive-card">
+            <img src="public/archive/misiones-religiosas-palacio.jpg" alt="Misiones religiosas" />
+            <figcaption><strong>Misiones religiosas</strong><span>Actividades religiosas realizadas para la comunidad de San Felipe.</span></figcaption>
+          </figure>
+          <figure class="archive-card">
+            <img src="public/archive/retrato-familiar-duenos-1915.jpg" alt="Retrato familiar" />
+            <figcaption><strong>Retrato familiar</strong><span>Registro familiar realizado dentro del palacio, año 1915.</span></figcaption>
+          </figure>
         </div>
-    </section>
+      </section>
 
-    <!-- Footer Master's Level -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>Hacienda Quilpué</h3>
-                    <p>Proyecto de Tesis / Portafolio Académico</p>
-                </div>
-                <div class="footer-uv">
-                    <div class="uv-info">
-                        <span class="inst-logo">🎓</span>
-                        <div>
-                            <h4>Universidad de Valparaíso</h4>
-                            <p>Magíster en Patrimonio</p>
-                            <p>Facultad de Humanidades y Educación</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-contact">
-                    <span class="label">Investigadora</span>
-                    <h4>Almendra Zuleta Díaz</h4>
-                    <p>Profesora de Historia y Geografía</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 • Portafolio de Investigación Patrimonial</p>
-            </div>
+      <section class="section muted" id="linea-tiempo">
+        <div class="section-heading wide">
+          <p class="eyebrow">Proceso histórico</p>
+          <h2>Línea de tiempo</h2>
+          <p>
+            El recorrido sitúa el palacio dentro de un proceso mayor: la formación de San
+            Felipe, el auge agrícola del Valle del Aconcagua, la filantropía de Juana Ross
+            Edwards, el esplendor del inmueble y su posterior transformación en ruina
+            patrimonial.
+          </p>
         </div>
-    </footer>
+        <ol class="timeline">
+          <li>
+            <div class="timeline-rail"><span>01</span></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span>Origen territorial</span><time>1740</time></div>
+              <div><h3>Fundación de San Felipe el Real</h3><p>El Valle del Aconcagua se consolida como territorio agrícola y ganadero, con haciendas que articulan producción, vivienda, servicios y vida comunitaria.</p></div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-rail"><span>02</span></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span>Paisaje hacendal</span><time>Siglo XIX</time></div>
+              <div><h3>Consolidación de las haciendas</h3><p>Propiedades como Lo Vicuña, El Tártaro y Quilpué fortalecen el prestigio social y económico de sus propietarios y configuran el paisaje rural regional.</p></div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-rail"><span>03</span></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span>Familia y beneficencia</span><time>1830</time></div>
+              <div><h3>Nacimiento de Juana Ross Edwards</h3><p>Nace una figura central para la historia del palacio, reconocida por su vocación religiosa, filantrópica y de servicio social.</p></div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-rail"><span>04</span></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span>Proyecto arquitectónico</span><time>1866-1880</time></div>
+              <div><h3>Construcción del Palacio Hacienda Quilpué</h3><p>Juan Eduardo Fehrman proyecta una residencia de inspiración francesa, excepcional para el contexto rural del Valle del Aconcagua.</p></div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-rail"><span>05</span></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span>Crisis sanitaria</span><time>1886-1888</time></div>
+              <div><h3>Epidemia del cólera</h3><p>Juana Ross organiza ayuda sanitaria y social mediante lazaretos, alimentos, ropa, medicamentos y atención para trabajadores e inquilinos.</p></div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-rail"><span>06</span></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span>Reconocimiento social</span><time>Siglo XX</time></div>
+              <div><h3>Esplendor del palacio</h3><p>La residencia recibe visitas internacionales y consolida su imagen pública como el “Versalles Chileno”.</p></div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-rail"><span>07</span></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span>Transformación institucional</span><time>1967-1973</time></div>
+              <div><h3>Traspaso, reforma agraria y proyecto universitario</h3><p>La propiedad pasa al Estado de Chile y se proyecta como centro de formación para Agronomía, iniciativa interrumpida en 1973.</p></div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-rail"><span>08</span></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span>Deterioro material</span><time>1985</time></div>
+              <div><h3>Demolición parcial</h3><p>Tras daños estructurales se retiran techumbre, chimeneas y parte de la estructura interior; luego desaparecen pisos, vigas, pilares y mobiliario.</p></div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-rail"><span>09</span></div>
+            <div class="timeline-card">
+              <div class="timeline-meta"><span>Memoria vigente</span><time>Actualidad</time></div>
+              <div><h3>Ruinas, memoria y actividades culturales</h3><p>Las ruinas permanecen como testimonio patrimonial de San Felipe y del Valle del Aconcagua, acogiendo algunas actividades culturales.</p></div>
+            </div>
+          </li>
+        </ol>
+      </section>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
-        <span>↑</span>
-    </button>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">&times;</button>
-        <div class="lightbox-content">
-            <img src="" alt="" id="lightboxImage">
-            <div class="lightbox-caption" id="lightboxCaption"></div>
+      <section class="section" id="palacio">
+        <div class="section-heading">
+          <p class="eyebrow">Arquitectura y territorio</p>
+          <h2>El palacio</h2>
         </div>
-    </div>
+        <div class="feature-grid">
+          <article class="feature-card"><span>Arquitectura</span><h3>Estilo francés</h3><p>Su diseño monumental incorporó una organización espacial inspirada en modelos residenciales europeos de fines del siglo XIX.</p></article>
+          <article class="feature-card"><span>Espacios interiores</span><h3>Más de 100 habitaciones</h3><p>El palacio contó con salones amplios, dependencias de servicio, habitaciones y áreas destinadas a actividades sociales.</p></article>
+          <article class="feature-card"><span>Entorno y jardines</span><h3>Alamedas y espejo de agua</h3><p>Los jardines, senderos y el espejo de agua reforzaban la puesta en escena del edificio y su relación con el paisaje.</p></article>
+          <article class="feature-card"><span>Función productiva</span><h3>Hacienda agrícola</h3><p>Quilpué operó como centro agrícola vinculado a viñedos, cáñamo, trabajo rural y redes económicas regionales.</p></article>
+        </div>
+      </section>
 
-    <script src="script.js"></script>
-</body>
+      <section class="quote-band">
+        <p>“Versalles Chileno” fue el nombre con que se reconoció la singularidad del palacio: una arquitectura de aspiración europea emplazada en un territorio profundamente agrícola.</p>
+      </section>
 
+      <section class="section split" id="ruinas">
+        <div class="section-heading">
+          <p class="eyebrow">Patrimonio y memoria</p>
+          <h2>Las ruinas en la actualidad</h2>
+        </div>
+        <div class="split-content">
+          <div>
+            <p>Tras décadas de uso, abandono, daños estructurales y demolición parcial, las ruinas constituyen el principal vestigio material de una de las residencias más relevantes del Valle del Aconcagua.</p>
+            <ul class="memory-list">
+              <li>Las ruinas permiten leer las transformaciones sociales, productivas y políticas del territorio.</li>
+              <li>La materialidad remanente conserva huellas de esplendor, abandono, deterioro e intervención humana.</li>
+              <li>El sitio opera como espacio de memoria colectiva, encuentro comunitario y reflexión patrimonial.</li>
+            </ul>
+          </div>
+          <aside class="context-panel">
+            <span class="label">Ubicación</span>
+            <strong>San Felipe, Región de Valparaíso</strong>
+            <p>Su emplazamiento cercano a rutas agrícolas y a la red ferroviaria favoreció la circulación de productos, personas e ideas.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section muted">
+        <div class="portrait-study">
+          <img src="public/archive/juana-ross.jpg" alt="Retrato de Juana Ross Edwards" />
+          <div>
+            <span class="label">Figura histórica</span>
+            <h3>Juana Ross Edwards</h3>
+            <p>Su figura permite vincular la historia arquitectónica del palacio con redes de filantropía, beneficencia y apoyo social durante el siglo XIX.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sources" id="fuentes">
+        <div class="section-heading">
+          <p class="eyebrow">Fuentes y créditos</p>
+          <h2>Material de trabajo</h2>
+        </div>
+        <div class="source-list">
+          <p>Contenido base reorganizado desde los documentos de trabajo: <strong>“Resumen información.docx”</strong> e <strong>“Info linea de tiempo.docx”</strong>.</p>
+          <p>Archivo fotográfico y logos institucionales integrados desde el repositorio compartido: <strong>FernandoTaum/HaciendaQuilpue</strong>.</p>
+          <p>Autoría de la investigación y curaduría del recorrido: <strong>Almendra Zuleta Díaz</strong>.</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

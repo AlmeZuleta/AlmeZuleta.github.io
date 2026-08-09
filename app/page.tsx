@@ -419,6 +419,9 @@ export default function Home() {
           <span className="label">Autora</span>
           <strong>Almendra Zuleta Díaz</strong>
           <p>Magíster en Patrimonio · Universidad de Valparaíso</p>
+          <p className="site-credit">
+            Diseño y desarrollo web: Fernando Taum · Estudiante y GRA, Universidad de Valparaíso
+          </p>
         </div>
       </footer>
     </main>

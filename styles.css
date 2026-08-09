@@ -612,6 +612,12 @@ h3 {
   color: rgba(255, 250, 242, 0.78);
 }
 
+.institutional-footer .site-credit {
+  color: rgba(255, 250, 242, 0.64);
+  font-size: 0.92rem;
+  margin-top: 14px;
+}
+
 .footer-logos {
   align-items: center;
   display: flex;

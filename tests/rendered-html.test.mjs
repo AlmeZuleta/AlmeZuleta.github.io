@@ -47,7 +47,7 @@ test("server-renders the heritage thesis site", async () => {
   assert.match(html, /Versalles Chileno/);
   assert.match(html, /institutional-footer/);
   assert.match(html, /Magíster en Patrimonio · Universidad de Valparaíso/);
-  assert.match(html, /Diseño y desarrollo web: Fernando Taum/);
+  assert.match(html, /Diseño y desarrollo web: Fernando Aros/);
   assert.doesNotMatch(html, /Fuentes y créditos|Material de trabajo|href="#fuentes"/);
   assert.match(html, /og:image" content="\/og\.png"/);
 });

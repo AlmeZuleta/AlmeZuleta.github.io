@@ -270,18 +270,51 @@ h3 {
   background: #fbf7ef;
 }
 
-.archive-grid {
+.synthesis-section {
+  background: #f5efe6;
+}
+
+.value-section {
+  background: #fffaf2;
+  border-top: 1px solid var(--line);
+}
+
+.archive-grid,
+.synthesis-grid {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.archive-card {
+.archive-card,
+.synthesis-card {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.archive-card {
   margin: 0;
   overflow: hidden;
+}
+
+.synthesis-card {
+  min-height: 250px;
+  padding: 28px;
+}
+
+.synthesis-card h3 {
+  color: var(--blue);
+  font-size: clamp(24px, 2.6vw, 34px);
+  margin-bottom: 18px;
+}
+
+.synthesis-card p {
+  color: var(--muted-ink);
+}
+
+.value-card {
+  background: #fbf7ef;
 }
 
 .archive-card a {
@@ -743,6 +776,7 @@ h3 {
 
   .intro-band,
   .two-column,
+  .synthesis-grid,
   .feature-grid,
   .archive-grid,
   .split-content,

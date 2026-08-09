@@ -43,6 +43,12 @@ test("server-renders the heritage thesis site", async () => {
   assert.match(html, /<details class="timeline-card"/);
   assert.match(html, /Iniciar recorrido patrimonial/);
   assert.match(html, /Patrimonio y memoria territorial/);
+  assert.match(html, /Hallazgos principales/);
+  assert.match(html, /Arquitectura y poder hacendal/);
+  assert.match(html, /Ruina como documento patrimonial/);
+  assert.match(html, /Ejes de valoración/);
+  assert.match(html, /Valor arquitectónico/);
+  assert.match(html, /Valor memorial/);
   assert.match(html, /Estado actual de las ruinas/);
   assert.match(html, /1886-1888/);
   assert.match(html, /Epidemia del cólera/);

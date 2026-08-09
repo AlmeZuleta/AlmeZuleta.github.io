@@ -84,6 +84,44 @@ const memoryItems = [
   "El sitio opera como espacio de memoria colectiva, encuentro comunitario y reflexión patrimonial.",
 ];
 
+const findings = [
+  {
+    title: "Arquitectura y poder hacendal",
+    text: "El palacio expresa la relación entre monumentalidad arquitectónica, prestigio familiar y organización productiva del territorio agrícola.",
+  },
+  {
+    title: "Ruina como documento patrimonial",
+    text: "El estado actual del inmueble permite leer procesos de esplendor, abandono, deterioro material y persistencia de la memoria local.",
+  },
+  {
+    title: "Filantropía y acción social",
+    text: "La figura de Juana Ross Edwards vincula la historia del palacio con prácticas de beneficencia, asistencia sanitaria y compromiso comunitario.",
+  },
+  {
+    title: "Territorio y conectividad",
+    text: "La hacienda se comprende en relación con San Felipe, el Valle del Aconcagua, las rutas agrícolas y la articulación ferroviaria regional.",
+  },
+];
+
+const heritageValues = [
+  {
+    title: "Valor arquitectónico",
+    text: "Se manifiesta en la inspiración francesa, la escala del edificio, sus salones, jardines y composición monumental.",
+  },
+  {
+    title: "Valor histórico-social",
+    text: "Permite reconocer formas de vida hacendal, redes familiares, trabajo rural y sociabilidad vinculada a la elite agrícola.",
+  },
+  {
+    title: "Valor territorial",
+    text: "Relaciona el inmueble con la configuración productiva del Valle del Aconcagua y con la historia urbana de San Felipe.",
+  },
+  {
+    title: "Valor memorial",
+    text: "Las ruinas conservan huellas materiales y simbólicas que sostienen memorias comunitarias sobre pérdida, transformación y pertenencia.",
+  },
+];
+
 const archiveItems = [
   {
     id: "fachada",
@@ -208,6 +246,46 @@ export default function Home() {
             asociadas al trabajo rural, la familia Edwards Ross, la
             transformación de las haciendas y la memoria actual de San Felipe.
           </p>
+        </div>
+      </section>
+
+      <section className="section synthesis-section">
+        <div className="section-heading wide">
+          <p className="eyebrow">Síntesis interpretativa</p>
+          <h2>Hallazgos principales</h2>
+          <p>
+            La lectura patrimonial del Palacio Hacienda Quilpué permite
+            identificar relaciones entre arquitectura, vida hacendal, acción
+            social y memoria territorial.
+          </p>
+        </div>
+        <div className="synthesis-grid">
+          {findings.map((item) => (
+            <article className="synthesis-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section value-section">
+        <div className="section-heading wide">
+          <p className="eyebrow">Valor patrimonial</p>
+          <h2>Ejes de valoración</h2>
+          <p>
+            La relevancia del inmueble se organiza en dimensiones
+            complementarias que permiten comprender su importancia para la
+            historia local y regional.
+          </p>
+        </div>
+        <div className="synthesis-grid value-grid">
+          {heritageValues.map((item) => (
+            <article className="synthesis-card value-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 

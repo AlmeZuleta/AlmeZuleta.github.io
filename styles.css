@@ -250,8 +250,18 @@ h3 {
   background: #fbf7ef;
 }
 
+.synthesis-section {
+  background: #f5efe6;
+}
+
+.value-section {
+  background: #fffaf2;
+  border-top: 1px solid var(--line);
+}
+
 .archive-grid,
-.feature-grid {
+.feature-grid,
+.synthesis-grid {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -259,6 +269,7 @@ h3 {
 
 .archive-card,
 .feature-card,
+.synthesis-card,
 .context-panel,
 .source-list,
 .portrait-study {
@@ -269,6 +280,25 @@ h3 {
 
 .archive-card {
   overflow: hidden;
+}
+
+.synthesis-card {
+  min-height: 250px;
+  padding: 28px;
+}
+
+.synthesis-card h3 {
+  color: var(--blue);
+  font-size: clamp(24px, 2.6vw, 34px);
+  margin-bottom: 18px;
+}
+
+.synthesis-card p {
+  color: var(--muted-ink);
+}
+
+.value-card {
+  background: #fbf7ef;
 }
 
 .archive-card a {
@@ -653,6 +683,7 @@ h3 {
   .intro-band,
   .two-column,
   .feature-grid,
+  .synthesis-grid,
   .archive-grid,
   .split-content,
   .portrait-study,

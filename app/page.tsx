@@ -420,7 +420,7 @@ export default function Home() {
           <strong>Almendra Zuleta Díaz</strong>
           <p>Magíster en Patrimonio · Universidad de Valparaíso</p>
           <p className="site-credit">
-            Diseño y desarrollo web: Fernando Taum · Estudiante y GRA, Universidad de Valparaíso
+            Diseño y desarrollo web: Fernando Taum · Graduate Research Assistant, Ohio University
           </p>
         </div>
       </footer>

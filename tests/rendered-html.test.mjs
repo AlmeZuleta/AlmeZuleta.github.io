@@ -34,7 +34,6 @@ test("server-renders the heritage thesis site", async () => {
   assert.match(html, /Palacio Hacienda Quilpué/);
   assert.match(html, /Almendra Zuleta Díaz/);
   assert.match(html, /Magíster en Patrimonio/);
-  assert.match(html, /¿Qué es patrimonio\?/);
   assert.match(html, /Imágenes históricas del palacio/);
   assert.match(html, /\/archive\/hero-palacio-1915\.jpg/);
   assert.match(html, /href="#archivo-fachada"/);
@@ -42,10 +41,16 @@ test("server-renders the heritage thesis site", async () => {
   assert.match(html, /\/archive\/logo-uv\.png/);
   assert.match(html, /Línea de tiempo/);
   assert.match(html, /<details class="timeline-card"/);
+  assert.match(html, /Iniciar recorrido patrimonial/);
+  assert.match(html, /Patrimonio y memoria territorial/);
+  assert.match(html, /Estado actual de las ruinas/);
   assert.match(html, /1886-1888/);
   assert.match(html, /Epidemia del cólera/);
-  assert.match(html, /Versalles Chileno/);
+  assert.match(html, /suntuosidad, jardines y sociabilidad aristocrática/);
   assert.match(html, /Fachada frontal/);
+  assert.match(html, /Acceso y vida comunitaria/);
+  assert.match(html, /Retrato infantil/);
+  assert.doesNotMatch(html, /Comenzar el recorrido|¿Qué es patrimonio\?|Infancias en el palacio|lujo, jardines/);
   assert.doesNotMatch(html, /Parte delantera/);
   assert.match(html, /institutional-footer/);
   assert.match(html, /Magíster en Patrimonio · Universidad de Valparaíso/);

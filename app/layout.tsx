@@ -3,7 +3,7 @@ import "./globals.css";
 
 const siteTitle = "Palacio Hacienda Quilpué | Almendra Zuleta Díaz";
 const siteDescription =
-  "Ruta de la memoria por las ruinas del Palacio Hacienda Quilpué, investigación patrimonial de Almendra Zuleta Díaz para el Magíster en Patrimonio.";
+  "Itinerario de memoria patrimonial por las ruinas del Palacio Hacienda Quilpué, investigación de Almendra Zuleta Díaz para el Magíster en Patrimonio.";
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1680,
         height: 920,
-        alt: "Palacio Hacienda Quilpué, Ruta de la memoria, Almendra Zuleta Díaz",
+        alt: "Palacio Hacienda Quilpué, memoria patrimonial, Almendra Zuleta Díaz",
       },
     ],
   },

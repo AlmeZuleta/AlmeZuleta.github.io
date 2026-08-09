@@ -3,13 +3,13 @@ const timeline = [
     phase: "Origen territorial",
     period: "1740",
     title: "Fundación de San Felipe el Real",
-    text: "El Valle del Aconcagua se consolida como territorio agrícola y ganadero, con haciendas que articulan producción, vivienda, servicios, caminos interiores y vida comunitaria.",
+    text: "El Valle del Aconcagua se consolida como territorio agrícola y ganadero, con haciendas que organizan producción, residencia, servicios, caminos interiores y vida comunitaria.",
   },
   {
     phase: "Paisaje hacendal",
     period: "Primeras décadas del siglo XIX",
     title: "Consolidación de las haciendas",
-    text: "Propiedades como Lo Vicuña, El Tártaro y Quilpué fortalecen el prestigio social y económico de sus propietarios, al mismo tiempo que configuran el paisaje rural regional.",
+    text: "Propiedades como Lo Vicuña, El Tártaro y Quilpué consolidan el prestigio social y económico de sus propietarios, al mismo tiempo que configuran el paisaje rural regional.",
   },
   {
     phase: "Familia y beneficencia",
@@ -33,7 +33,7 @@ const timeline = [
     phase: "Reconocimiento social",
     period: "Primeras décadas del siglo XX",
     title: "Esplendor del palacio",
-    text: "La residencia recibe visitas internacionales y consolida su imagen pública como el “Versalles Chileno”, asociada a lujo, jardines y sociabilidad aristocrática.",
+    text: "La residencia recibe visitas internacionales y consolida su imagen pública como el “Versalles Chileno”, asociada a suntuosidad, jardines y sociabilidad aristocrática.",
   },
   {
     phase: "Transformación institucional",
@@ -51,7 +51,7 @@ const timeline = [
     phase: "Memoria vigente",
     period: "Actualidad",
     title: "Ruinas, memoria y actividades culturales",
-    text: "Las ruinas permanecen como testimonio patrimonial de San Felipe y del Valle del Aconcagua, acogiendo algunas actividades culturales en los antiguos jardines.",
+    text: "Las ruinas permanecen como testimonio patrimonial de San Felipe y del Valle del Aconcagua, acogiendo actividades culturales y comunitarias en los antiguos jardines.",
   },
 ];
 
@@ -64,7 +64,7 @@ const palaceThemes = [
   {
     title: "Espacios interiores",
     value: "Más de 100 habitaciones",
-    text: "El palacio contó con salones amplios, dependencias de servicio, habitaciones y áreas destinadas a actividades sociales de gran escala.",
+    text: "El palacio contó con salones amplios, dependencias de servicio, habitaciones y áreas destinadas a recepción y sociabilidad.",
   },
   {
     title: "Entorno y jardines",
@@ -89,19 +89,19 @@ const archiveItems = [
     id: "fachada",
     src: "/archive/hero-palacio-1915.jpg",
     title: "Fachada frontal",
-    caption: "Registro histórico del frente del Palacio Hacienda Quilpué, 1915.",
+    caption: "Registro histórico de la fachada del Palacio Hacienda Quilpué, 1915.",
   },
   {
     id: "acceso",
     src: "/archive/acceso-palacio-1915.jpg",
     title: "Acceso al palacio",
-    caption: "Cercanía, escala y ornamentación del acceso principal, año 1915.",
+    caption: "Vista del acceso principal, con énfasis en su escala y ornamentación, año 1915.",
   },
   {
     id: "comunidad",
     src: "/archive/acceso-comunidad-1915.jpg",
-    title: "Acceso y comunidad",
-    caption: "Grupo reunido junto al acceso, evidencia de la vida social del recinto.",
+    title: "Acceso y vida comunitaria",
+    caption: "Registro de reunión comunitaria junto al acceso principal del recinto.",
   },
   {
     id: "jardines",
@@ -113,25 +113,25 @@ const archiveItems = [
     id: "parrones",
     src: "/archive/parrones-palacio.jpg",
     title: "Parrones interiores",
-    caption: "Imagen de los parrones como parte del ambiente doméstico y productivo.",
+    caption: "Registro de los parrones como espacio doméstico, productivo y de sociabilidad.",
   },
   {
     id: "misiones",
     src: "/archive/misiones-religiosas-palacio.jpg",
     title: "Misiones religiosas",
-    caption: "Actividades religiosas realizadas para la comunidad de San Felipe.",
+    caption: "Prácticas religiosas realizadas para la comunidad de San Felipe.",
   },
   {
     id: "familia",
     src: "/archive/retrato-familiar-duenos-1915.jpg",
     title: "Retrato familiar",
-    caption: "Registro familiar realizado dentro del palacio, año 1915.",
+    caption: "Registro de la familia propietaria en dependencias del palacio, año 1915.",
   },
   {
     id: "infancias",
     src: "/archive/retrato-familiar-hijos-1915.jpg",
-    title: "Infancias en el palacio",
-    caption: "Retrato de hijos de propietarios, vinculado a la vida cotidiana del lugar.",
+    title: "Retrato infantil",
+    caption: "Registro de niñas y niños de la familia propietaria en el contexto residencial del palacio.",
   },
 ];
 
@@ -150,15 +150,15 @@ export default function Home() {
           <a href="#patrimonio">Patrimonio</a>
           <a href="#archivo">Archivo</a>
           <a href="#linea-tiempo">Línea de tiempo</a>
-          <a href="#palacio">El palacio</a>
-          <a href="#ruinas">Las ruinas</a>
+          <a href="#palacio">Arquitectura</a>
+          <a href="#ruinas">Estado actual</a>
         </nav>
       </header>
 
       <section className="hero" id="inicio">
         <div className="hero-image" aria-hidden="true" />
         <div className="hero-content">
-          <p className="eyebrow">Ruta de la memoria por las ruinas</p>
+          <p className="eyebrow">Itinerario de memoria patrimonial</p>
           <h1>Palacio Hacienda Quilpué</h1>
           <p className="hero-lead">
             Investigación patrimonial sobre el antiguo “Versalles Chileno”,
@@ -167,7 +167,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="primary-action" href="#patrimonio">
-              Comenzar el recorrido
+              Iniciar recorrido patrimonial
             </a>
             <span>Almendra Zuleta Díaz · Magíster en Patrimonio</span>
           </div>
@@ -192,15 +192,15 @@ export default function Home() {
       <section className="section" id="patrimonio">
         <div className="section-heading">
           <p className="eyebrow">Marco conceptual</p>
-          <h2>¿Qué es patrimonio?</h2>
+          <h2>Patrimonio y memoria territorial</h2>
         </div>
         <div className="two-column">
           <p>
             El patrimonio corresponde al conjunto de bienes, lugares,
             tradiciones y conocimientos que una comunidad reconoce como parte
-            de su historia e identidad. No se limita a lo monumental: también
-            integra memorias, vínculos sociales, prácticas cotidianas y modos
-            de habitar un territorio.
+            de su historia e identidad. Su comprensión no se limita a lo
+            monumental: también integra memorias, vínculos sociales, prácticas
+            cotidianas y modos de habitar un territorio.
           </p>
           <p>
             En el caso del Palacio Hacienda Quilpué, el valor patrimonial se
@@ -264,7 +264,7 @@ export default function Home() {
           <p className="eyebrow">Proceso histórico</p>
           <h2>Línea de tiempo</h2>
           <p>
-            El recorrido sitúa el palacio dentro de un proceso mayor: la
+            La línea de tiempo sitúa el palacio dentro de un proceso mayor: la
             formación de San Felipe, el auge agrícola del Valle del Aconcagua,
             la filantropía de Juana Ross Edwards, el esplendor del inmueble y
             su posterior transformación en ruina patrimonial.
@@ -299,7 +299,7 @@ export default function Home() {
       <section className="section" id="palacio">
         <div className="section-heading">
           <p className="eyebrow">Arquitectura y territorio</p>
-          <h2>El palacio</h2>
+          <h2>Arquitectura del palacio</h2>
         </div>
         <div className="feature-grid">
           {palaceThemes.map((item) => (
@@ -315,8 +315,8 @@ export default function Home() {
       <section className="quote-band">
         <div>
           <p>
-            “Versalles Chileno” fue el nombre con que se reconoció la
-            singularidad del palacio: una arquitectura de aspiración europea
+            “Versalles Chileno” fue la denominación con que se reconoció la
+            singularidad del palacio: una arquitectura de inspiración europea
             emplazada en un territorio profundamente agrícola.
           </p>
         </div>
@@ -325,13 +325,13 @@ export default function Home() {
       <section className="section split" id="ruinas">
         <div className="section-heading">
           <p className="eyebrow">Patrimonio y memoria</p>
-          <h2>Las ruinas en la actualidad</h2>
+          <h2>Estado actual de las ruinas</h2>
         </div>
         <div className="split-content">
           <div>
             <p>
               Tras décadas de uso, abandono, daños estructurales y demolición
-              parcial, las ruinas constituyen el principal vestigio material de
+              parcial, las ruinas constituyen el principal remanente material de
               una de las residencias más relevantes del Valle del Aconcagua.
               Su valor no se agota en lo arquitectónico: también permite
               comprender cambios sociales, económicos y políticos que afectaron
@@ -358,7 +358,7 @@ export default function Home() {
       <section className="section muted">
         <div className="section-heading wide">
           <p className="eyebrow">Vida hacendal</p>
-          <h2>Familia, trabajo y compromiso social</h2>
+          <h2>Familia, trabajo y acción social</h2>
           <p>
             La historia del Palacio Hacienda Quilpué se vincula con la familia
             Edwards Ross y, especialmente, con Juana Ross Edwards. Su
@@ -378,7 +378,7 @@ export default function Home() {
               con redes de filantropía, beneficencia y apoyo social durante el
               siglo XIX. El retrato funciona aquí como punto de entrada a una
               lectura patrimonial donde familia, territorio y memoria pública
-              se cruzan.
+              convergen.
             </p>
           </div>
         </div>
@@ -388,7 +388,7 @@ export default function Home() {
             <p>
               Fue una propiedad agrícola relevante, con actividades vinculadas
               a viñedos, cáñamo, ganado, trabajo rural y redes productivas que
-              aportaron al desarrollo económico de San Felipe.
+              contribuyeron al desarrollo económico de San Felipe.
             </p>
           </article>
           <article>

@@ -88,7 +88,7 @@ const archiveItems = [
   {
     id: "fachada",
     src: "/archive/hero-palacio-1915.jpg",
-    title: "Parte delantera del palacio",
+    title: "Fachada frontal",
     caption: "Registro histórico del frente del Palacio Hacienda Quilpué, 1915.",
   },
   {

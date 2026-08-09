@@ -45,6 +45,8 @@ test("server-renders the heritage thesis site", async () => {
   assert.match(html, /1886-1888/);
   assert.match(html, /Epidemia del cólera/);
   assert.match(html, /Versalles Chileno/);
+  assert.match(html, /Fachada frontal/);
+  assert.doesNotMatch(html, /Parte delantera/);
   assert.match(html, /institutional-footer/);
   assert.match(html, /Magíster en Patrimonio · Universidad de Valparaíso/);
   assert.match(html, /Diseño y desarrollo web: Fernando Aros/);

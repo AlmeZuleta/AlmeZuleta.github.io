@@ -103,22 +103,30 @@ const findings = [
   },
 ];
 
-const heritageValues = [
+const moreInfoSections = [
   {
-    title: "Valor arquitectónico",
-    text: "Se manifiesta en la inspiración francesa, la escala del edificio, sus salones, jardines y composición monumental.",
+    title: "Construcción y proyecto arquitectónico",
+    text: "La construcción del Palacio Hacienda Quilpué comenzó en 1866 por encargo de Juana Ross Edwards. El arquitecto Juan Eduardo Fehrman desarrolló una residencia de marcada influencia francesa, con amplios espacios interiores, ornamentación detallada y una organización espacial excepcional para el contexto rural del Valle del Aconcagua.",
   },
   {
-    title: "Valor histórico-social",
-    text: "Permite reconocer formas de vida hacendal, redes familiares, trabajo rural y sociabilidad vinculada a la elite agrícola.",
+    title: "Espacios interiores y vida social",
+    text: "El inmueble llegó a contar con más de cien habitaciones distribuidas en sectores destinados a vida familiar, administración, servicio y recepción de invitados. Sus salones principales fueron concebidos para reuniones de importancia, reforzando la imagen de prestigio, exclusividad y sociabilidad aristocrática.",
   },
   {
-    title: "Valor territorial",
-    text: "Relaciona el inmueble con la configuración productiva del Valle del Aconcagua y con la historia urbana de San Felipe.",
+    title: "Hacienda, producción y trabajo",
+    text: "La Hacienda Quilpué fue una propiedad agrícola relevante, vinculada al cultivo de viñedos, cereales y cáñamo. Su funcionamiento articulaba propietarios, administradores, trabajadores agrícolas, personal doméstico y redes productivas que contribuyeron al desarrollo económico de San Felipe.",
   },
   {
-    title: "Valor memorial",
-    text: "Las ruinas conservan huellas materiales y simbólicas que sostienen memorias comunitarias sobre pérdida, transformación y pertenencia.",
+    title: "Ubicación, territorio y ferrocarril",
+    text: "El emplazamiento del palacio en San Felipe, dentro del Valle del Aconcagua, favoreció su integración con rutas agrícolas y vías de comunicación. La cercanía con la red ferroviaria facilitó el transporte de productos, la movilidad de personas y la conexión con otros centros urbanos del país.",
+  },
+  {
+    title: "Filantropía y crisis sanitaria",
+    text: "Entre 1886 y 1888, durante la epidemia del cólera, Juana Ross Edwards impulsó acciones de ayuda mediante lazaretos, alimentos, abrigo, medicamentos y atención médica. Esta asistencia alcanzó tanto a la población del valle como a trabajadores e inquilinos de la hacienda.",
+  },
+  {
+    title: "Abandono, demolición y memoria",
+    text: "Tras el cese de sus funciones originales, el palacio inició un proceso de abandono y deterioro material. La demolición parcial y la pérdida de elementos constructivos transformaron el inmueble en ruina, pero también consolidaron su condición de testimonio patrimonial y espacio de memoria colectiva.",
   },
 ];
 
@@ -190,6 +198,7 @@ export default function Home() {
           <a href="#linea-tiempo">Línea de tiempo</a>
           <a href="#palacio">Arquitectura</a>
           <a href="#ruinas">Estado actual</a>
+          <a href="#saber-mas">Saber más</a>
         </nav>
       </header>
 
@@ -227,6 +236,61 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section muted juana-section">
+        <div className="section-heading wide">
+          <p className="eyebrow">Figura histórica</p>
+          <h2>Juana Ross Edwards: biografía patrimonial</h2>
+          <p>
+            La historia del Palacio Hacienda Quilpué se vincula con la familia
+            Edwards Ross y, especialmente, con Juana Ross Edwards. Su
+            filantropía se expresó en hospitales, escuelas, iglesias, asilos y
+            programas de ayuda social. Durante la epidemia del cólera, su
+            respuesta articuló recursos sanitarios y asistencia para la
+            comunidad y para los trabajadores de la hacienda.
+          </p>
+        </div>
+        <div className="portrait-study">
+          <img src="/archive/juana-ross.jpg" alt="Retrato de Juana Ross Edwards" />
+          <div>
+            <span className="label">Biografía y memoria social</span>
+            <h3>Juana Ross Edwards</h3>
+            <p>
+              Nacida en La Serena en 1830, su figura permite vincular la
+              historia arquitectónica del palacio con redes de filantropía,
+              beneficencia y apoyo social durante el siglo XIX. El retrato
+              funciona aquí como punto de entrada a una lectura patrimonial
+              donde familia, territorio y memoria pública convergen.
+            </p>
+          </div>
+        </div>
+        <div className="research-columns">
+          <article>
+            <h3>La hacienda</h3>
+            <p>
+              Fue una propiedad agrícola relevante, con actividades vinculadas
+              a viñedos, cáñamo, ganado, trabajo rural y redes productivas que
+              contribuyeron al desarrollo económico de San Felipe.
+            </p>
+          </article>
+          <article>
+            <h3>La familia Edwards Ross</h3>
+            <p>
+              Su influencia política, económica y social marcó tanto la
+              historia del inmueble como diversas obras de beneficencia en
+              Chile.
+            </p>
+          </article>
+          <article>
+            <h3>El ferrocarril</h3>
+            <p>
+              La cercanía con la línea férrea fortaleció la conexión
+              territorial y la comercialización de productos agrícolas del
+              Valle del Aconcagua.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section className="section" id="patrimonio">
         <div className="section-heading">
           <p className="eyebrow">Marco conceptual</p>
@@ -246,46 +310,6 @@ export default function Home() {
             asociadas al trabajo rural, la familia Edwards Ross, la
             transformación de las haciendas y la memoria actual de San Felipe.
           </p>
-        </div>
-      </section>
-
-      <section className="section synthesis-section">
-        <div className="section-heading wide">
-          <p className="eyebrow">Síntesis interpretativa</p>
-          <h2>Hallazgos principales</h2>
-          <p>
-            La lectura patrimonial del Palacio Hacienda Quilpué permite
-            identificar relaciones entre arquitectura, vida hacendal, acción
-            social y memoria territorial.
-          </p>
-        </div>
-        <div className="synthesis-grid">
-          {findings.map((item) => (
-            <article className="synthesis-card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section value-section">
-        <div className="section-heading wide">
-          <p className="eyebrow">Valor patrimonial</p>
-          <h2>Ejes de valoración</h2>
-          <p>
-            La relevancia del inmueble se organiza en dimensiones
-            complementarias que permiten comprender su importancia para la
-            historia local y regional.
-          </p>
-        </div>
-        <div className="synthesis-grid value-grid">
-          {heritageValues.map((item) => (
-            <article className="synthesis-card value-card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
         </div>
       </section>
 
@@ -433,58 +457,46 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section muted">
+      <section className="section more-info-section" id="saber-mas">
         <div className="section-heading wide">
-          <p className="eyebrow">Vida hacendal</p>
-          <h2>Familia, trabajo y acción social</h2>
+          <p className="eyebrow">Lectura ampliada</p>
+          <h2>¿Quieres saber más?</h2>
           <p>
-            La historia del Palacio Hacienda Quilpué se vincula con la familia
-            Edwards Ross y, especialmente, con Juana Ross Edwards. Su
-            filantropía se expresó en hospitales, escuelas, iglesias, asilos y
-            programas de ayuda social. Durante la epidemia del cólera, su
-            respuesta articuló recursos sanitarios y asistencia para la
-            comunidad y para los trabajadores de la hacienda.
+            Esta sección reúne antecedentes complementarios del resumen de la
+            investigación para profundizar en la construcción, la vida hacendal,
+            el territorio y la transformación patrimonial del inmueble.
           </p>
         </div>
-        <div className="portrait-study">
-          <img src="/archive/juana-ross.jpg" alt="Retrato de Juana Ross Edwards" />
-          <div>
-            <span className="label">Figura histórica</span>
-            <h3>Juana Ross Edwards</h3>
-            <p>
-              Su figura permite vincular la historia arquitectónica del palacio
-              con redes de filantropía, beneficencia y apoyo social durante el
-              siglo XIX. El retrato funciona aquí como punto de entrada a una
-              lectura patrimonial donde familia, territorio y memoria pública
-              convergen.
-            </p>
-          </div>
+        <div className="more-info-list">
+          {moreInfoSections.map((item, index) => (
+            <details className="more-info-item" key={item.title} open={index === 0}>
+              <summary>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{item.title}</h3>
+              </summary>
+              <p>{item.text}</p>
+            </details>
+          ))}
         </div>
-        <div className="research-columns">
-          <article>
-            <h3>La hacienda</h3>
-            <p>
-              Fue una propiedad agrícola relevante, con actividades vinculadas
-              a viñedos, cáñamo, ganado, trabajo rural y redes productivas que
-              contribuyeron al desarrollo económico de San Felipe.
-            </p>
-          </article>
-          <article>
-            <h3>La familia Edwards Ross</h3>
-            <p>
-              Su influencia política, económica y social marcó tanto la
-              historia del inmueble como diversas obras de beneficencia en
-              Chile.
-            </p>
-          </article>
-          <article>
-            <h3>El ferrocarril</h3>
-            <p>
-              La cercanía con la línea férrea fortaleció la conexión
-              territorial y la comercialización de productos agrícolas del
-              Valle del Aconcagua.
-            </p>
-          </article>
+      </section>
+
+      <section className="section synthesis-section">
+        <div className="section-heading wide">
+          <p className="eyebrow">Síntesis interpretativa</p>
+          <h2>Hallazgos principales</h2>
+          <p>
+            La lectura patrimonial del Palacio Hacienda Quilpué permite
+            identificar relaciones entre arquitectura, vida hacendal, acción
+            social y memoria territorial.
+          </p>
+        </div>
+        <div className="synthesis-grid">
+          {findings.map((item) => (
+            <article className="synthesis-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 

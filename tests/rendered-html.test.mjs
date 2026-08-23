@@ -43,12 +43,17 @@ test("server-renders the heritage thesis site", async () => {
   assert.match(html, /<details class="timeline-card"/);
   assert.match(html, /Iniciar recorrido patrimonial/);
   assert.match(html, /Patrimonio y memoria territorial/);
+  assert.match(html, /Juana Ross Edwards: biografía patrimonial/);
+  assert.match(html, /Biografía y memoria social/);
   assert.match(html, /Hallazgos principales/);
   assert.match(html, /Arquitectura y poder hacendal/);
   assert.match(html, /Ruina como documento patrimonial/);
-  assert.match(html, /Ejes de valoración/);
-  assert.match(html, /Valor arquitectónico/);
-  assert.match(html, /Valor memorial/);
+  assert.match(html, /href="#saber-mas"/);
+  assert.match(html, /¿Quieres saber más\?/);
+  assert.match(html, /Construcción y proyecto arquitectónico/);
+  assert.match(html, /Hacienda, producción y trabajo/);
+  assert.match(html, /Filantropía y crisis sanitaria/);
+  assert.doesNotMatch(html, /Ejes de valoración|Valor arquitectónico|Valor memorial/);
   assert.match(html, /Estado actual de las ruinas/);
   assert.match(html, /1886-1888/);
   assert.match(html, /Epidemia del cólera/);
@@ -63,6 +68,16 @@ test("server-renders the heritage thesis site", async () => {
   assert.match(html, /Diseño y desarrollo web: Fernando Aros/);
   assert.doesNotMatch(html, /Fuentes y créditos|Material de trabajo|href="#fuentes"/);
   assert.match(html, /og:image" content="\/og\.png"/);
+
+  assert.ok(
+    html.indexOf("Juana Ross Edwards: biografía patrimonial") <
+      html.indexOf("Patrimonio y memoria territorial"),
+    "Juana Ross biography should appear before the conceptual heritage section",
+  );
+  assert.ok(
+    html.indexOf("¿Quieres saber más?") < html.indexOf("Hallazgos principales"),
+    "Expanded reading should appear before the final findings section",
+  );
 });
 
 test("removes starter preview artifacts from final site", async () => {
@@ -74,9 +89,11 @@ test("removes starter preview artifacts from final site", async () => {
   ]);
 
   assert.doesNotMatch(page, /SkeletonPreview|codex-preview|react-loading-skeleton/);
+  assert.doesNotMatch(page, /heritageValues|Ejes de valoración/);
   assert.doesNotMatch(layout, /Starter Project|codex-preview|_sites-preview/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.doesNotMatch(css, /sites-skeleton|loading skeleton/i);
+  assert.match(css, /grid-auto-flow:\s*column/);
 
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));
 });

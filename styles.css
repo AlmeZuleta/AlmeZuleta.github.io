@@ -15,6 +15,7 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -24,11 +25,25 @@ body {
   color: var(--ink);
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+main,
+section,
+header,
+nav,
+.hero-content,
+.intro-band {
+  max-width: 100%;
 }
 
 p,
@@ -42,13 +57,14 @@ figure {
 .site-header {
   align-items: center;
   backdrop-filter: blur(18px);
-  background: rgba(247, 243, 236, 0.9);
+  background: rgba(247, 243, 236, 0.94);
   border-bottom: 1px solid rgba(31, 38, 36, 0.12);
+  box-shadow: 0 12px 28px rgba(31, 38, 36, 0.06);
   display: flex;
   gap: 24px;
   justify-content: space-between;
   left: 0;
-  padding: 18px clamp(20px, 5vw, 72px);
+  padding: 14px clamp(20px, 5vw, 72px);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -62,7 +78,12 @@ figure {
   font-size: 18px;
   gap: 12px;
   font-weight: 700;
+  min-width: 0;
   white-space: nowrap;
+}
+
+.brand > span:last-child {
+  min-width: 0;
 }
 
 .brand-logos {
@@ -88,12 +109,15 @@ nav {
 }
 
 nav a {
+  border-bottom: 1px solid transparent;
   color: var(--muted-ink);
   font-size: 14px;
   font-weight: 650;
+  padding: 4px 0;
 }
 
 nav a:hover {
+  border-color: rgba(138, 63, 45, 0.55);
   color: var(--clay);
 }
 
@@ -103,13 +127,13 @@ nav a:hover {
     url("public/archive/hero-palacio-1915.jpg");
   background-position: center;
   background-size: cover;
-  min-height: 88vh;
+  min-height: 82vh;
 }
 
 .hero-content {
   color: #fffaf2;
-  max-width: 900px;
-  padding: clamp(90px, 15vh, 150px) clamp(22px, 6vw, 86px) 72px;
+  max-width: 860px;
+  padding: clamp(82px, 13vh, 132px) clamp(22px, 6vw, 86px) 68px;
 }
 
 .eyebrow {
@@ -247,7 +271,9 @@ h3 {
 }
 
 .archive-section {
-  background: #fbf7ef;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 242, 0.82), rgba(245, 239, 230, 0.86)),
+    #fbf7ef;
 }
 
 .synthesis-section {
@@ -258,8 +284,8 @@ h3 {
 .feature-grid,
 .synthesis-grid {
   display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .archive-card,
@@ -271,13 +297,32 @@ h3 {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(31, 38, 36, 0.055);
 }
 
 .archive-card {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 3;
   overflow: hidden;
 }
 
+.archive-card:nth-child(1),
+.archive-card:nth-child(8),
+.archive-card:nth-child(16),
+.archive-card:nth-child(28) {
+  grid-column: span 6;
+}
+
+.archive-card:nth-child(1) img,
+.archive-card:nth-child(8) img,
+.archive-card:nth-child(16) img,
+.archive-card:nth-child(28) img {
+  aspect-ratio: 16 / 10;
+}
+
 .synthesis-card {
+  grid-column: span 3;
   min-height: 250px;
   padding: 28px;
 }
@@ -315,6 +360,7 @@ h3 {
 .archive-card figcaption {
   display: grid;
   gap: 8px;
+  flex: 1;
   padding: 18px;
 }
 
@@ -466,6 +512,22 @@ h3 {
   padding: 18px 4px 28px;
   position: relative;
   scroll-snap-type: x proximity;
+  scrollbar-color: rgba(138, 63, 45, 0.75) rgba(31, 38, 36, 0.08);
+  scrollbar-width: thin;
+}
+
+.timeline::-webkit-scrollbar {
+  height: 10px;
+}
+
+.timeline::-webkit-scrollbar-track {
+  background: rgba(31, 38, 36, 0.08);
+  border-radius: 999px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+  background: rgba(138, 63, 45, 0.72);
+  border-radius: 999px;
 }
 
 .timeline::before {
@@ -516,7 +578,9 @@ h3 {
 }
 
 .timeline-card {
-  background: linear-gradient(135deg, rgba(255, 250, 242, 0.96), rgba(247, 243, 236, 0.92));
+  background:
+    linear-gradient(135deg, rgba(255, 250, 242, 0.98), rgba(247, 243, 236, 0.92)),
+    var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 18px 42px rgba(31, 38, 36, 0.08);
@@ -599,6 +663,7 @@ h3 {
 }
 
 .feature-card {
+  grid-column: span 3;
   min-height: 290px;
   padding: 28px;
 }
@@ -729,25 +794,50 @@ h3 {
   .site-header {
     align-items: flex-start;
     flex-direction: column;
+    gap: 14px;
+    overflow: hidden;
+    width: 100%;
   }
 
   nav {
+    flex-wrap: wrap;
     justify-content: flex-start;
+    max-width: 100%;
+    overflow: visible;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  nav a {
+    flex: 0 1 auto;
   }
 
   .hero {
-    min-height: 760px;
+    min-height: 700px;
   }
 
   .intro-band,
   .two-column,
-  .feature-grid,
-  .synthesis-grid,
-  .archive-grid,
   .split-content,
   .portrait-study,
   .institutional-footer {
     grid-template-columns: 1fr;
+  }
+
+  .archive-grid,
+  .feature-grid,
+  .synthesis-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .archive-card,
+  .archive-card:nth-child(1),
+  .archive-card:nth-child(8),
+  .archive-card:nth-child(16),
+  .archive-card:nth-child(28),
+  .feature-card,
+  .synthesis-card {
+    grid-column: span 1;
   }
 
   .timeline {
@@ -774,7 +864,14 @@ h3 {
   }
 
   .brand {
+    align-items: flex-start;
+    font-size: 17px;
     white-space: normal;
+    width: 100%;
+  }
+
+  .brand > span:last-child {
+    line-height: 1.2;
   }
 
   .brand-logos img {
@@ -791,7 +888,17 @@ h3 {
   }
 
   .hero-content {
-    padding: 92px 20px 54px;
+    padding: 82px 20px 52px;
+  }
+
+  h1 {
+    font-size: 44px;
+    line-height: 1.05;
+    max-width: 10ch;
+  }
+
+  h2 {
+    font-size: 34px;
   }
 
   .hero-actions {
@@ -801,6 +908,25 @@ h3 {
 
   .primary-action {
     width: 100%;
+  }
+
+  .archive-grid,
+  .feature-grid,
+  .synthesis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-card:nth-child(1) img,
+  .archive-card:nth-child(8) img,
+  .archive-card:nth-child(16) img,
+  .archive-card:nth-child(28) img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .intro-band strong,
+  .hero-lead,
+  .section-heading p:not(.eyebrow) {
+    overflow-wrap: break-word;
   }
 }
 

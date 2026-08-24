@@ -61,6 +61,9 @@ test("server-renders the heritage thesis site", async () => {
   assert.match(html, /Fachada frontal/);
   assert.match(html, /Acceso y vida comunitaria/);
   assert.match(html, /Retrato infantil/);
+  assert.match(html, /Mujeres en el entorno del palacio/);
+  assert.match(html, /\/archive\/anexo-palacio-hacienda-quilpue-1922\.jpg/);
+  assert.match(html, /Retrato de Agustín Edwards Ross/);
   assert.doesNotMatch(html, /Comenzar el recorrido|¿Qué es patrimonio\?|Infancias en el palacio|lujo, jardines/);
   assert.doesNotMatch(html, /Parte delantera/);
   assert.match(html, /institutional-footer/);
@@ -96,4 +99,13 @@ test("removes starter preview artifacts from final site", async () => {
   assert.match(css, /grid-auto-flow:\s*column/);
 
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));
+});
+
+test("static GitHub Pages file includes appendix image records", async () => {
+  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+
+  assert.match(html, /anexo-mujeres-afueras-palacio\.jpg/);
+  assert.match(html, /Sector de bodegas de la hacienda/);
+  assert.match(html, /archivo-palacio-1922/);
+  assert.match(html, /Palacio Hacienda Quilpué, 1922/);
 });

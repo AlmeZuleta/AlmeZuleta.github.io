@@ -179,6 +179,138 @@ const archiveItems = [
     title: "Retrato infantil",
     caption: "Registro de niñas y niños de la familia propietaria en el contexto residencial del palacio.",
   },
+  {
+    id: "mujeres-afueras",
+    src: "/archive/anexo-mujeres-afueras-palacio.jpg",
+    title: "Mujeres en el entorno del palacio",
+    caption: "Registro de mujeres en las afueras del Palacio Hacienda Quilpué, vinculado al archivo visual de la investigación.",
+  },
+  {
+    id: "sector-bodegas",
+    src: "/archive/anexo-sector-bodegas-hacienda.jpg",
+    title: "Sector de bodegas de la hacienda",
+    caption: "Vista del área asociada a bodegas y dependencias productivas dentro del conjunto hacendal.",
+  },
+  {
+    id: "carroza",
+    src: "/archive/anexo-propietarios-carroza.jpg",
+    title: "Paseo en carroza",
+    caption: "Registro de integrantes de la familia propietaria durante un recorrido en carroza por la hacienda.",
+  },
+  {
+    id: "patios-hacienda",
+    src: "/archive/anexo-patios-hacienda.jpg",
+    title: "Patios de la hacienda",
+    caption: "Imagen de los patios interiores y espacios de tránsito cotidiano del conjunto.",
+  },
+  {
+    id: "comida-misiones",
+    src: "/archive/anexo-comida-misiones-religiosas.jpg",
+    title: "Actividad familiar y misiones religiosas",
+    caption: "Registro de participación familiar en una comida asociada a las misiones religiosas realizadas en el palacio.",
+  },
+  {
+    id: "familia-parrones",
+    src: "/archive/anexo-familia-parrones-hacienda.jpg",
+    title: "Familia junto a los parrones",
+    caption: "Escena familiar en los parrones de la hacienda, espacio de sociabilidad y vida doméstica.",
+  },
+  {
+    id: "misiones-anexo-uno",
+    src: "/archive/anexo-misiones-religiosas-palacio-01.jpg",
+    title: "Misiones religiosas en el palacio",
+    caption: "Registro complementario de prácticas religiosas desarrolladas en dependencias del Palacio Hacienda Quilpué.",
+  },
+  {
+    id: "misiones-anexo-dos",
+    src: "/archive/anexo-misiones-religiosas-palacio-02.jpg",
+    title: "Comunidad reunida en el acceso",
+    caption: "Grupo reunido junto al acceso principal durante actividades religiosas y comunitarias del recinto.",
+  },
+  {
+    id: "mujeres-cabalgando",
+    src: "/archive/anexo-mujeres-cabalgando-hacienda.jpg",
+    title: "Mujeres cabalgando en la hacienda",
+    caption: "Registro de movilidad y recreación en los espacios exteriores del conjunto hacendal.",
+  },
+  {
+    id: "familia-acceso-uno",
+    src: "/archive/anexo-familia-acceso-principal-01.jpg",
+    title: "Familia propietaria en el acceso principal",
+    caption: "Grupo familiar registrado junto a la entrada principal del palacio.",
+  },
+  {
+    id: "familia-acceso-dos",
+    src: "/archive/anexo-familia-acceso-principal-02.jpg",
+    title: "Escalinata del acceso principal",
+    caption: "Integrantes de la familia propietaria en la escalinata del acceso, con la fachada como marco arquitectónico.",
+  },
+  {
+    id: "familia-acceso-tres",
+    src: "/archive/anexo-familia-acceso-principal-03.jpg",
+    title: "Vida familiar junto al palacio",
+    caption: "Registro de niños y adultos en el entorno inmediato del acceso principal del inmueble.",
+  },
+  {
+    id: "fachada-lateral",
+    src: "/archive/anexo-fachada-lateral-palacio.jpg",
+    title: "Fachada lateral",
+    caption: "Vista lateral del palacio, útil para observar su escala, volumen y relación con el cierre perimetral.",
+  },
+  {
+    id: "porton-hierro",
+    src: "/archive/anexo-porton-principal-hierro.jpg",
+    title: "Portón principal de hierro",
+    caption: "Detalle del acceso principal, destacado por su trabajo en hierro y ornamentación.",
+  },
+  {
+    id: "fachada-principal-uno",
+    src: "/archive/anexo-fachada-principal-palacio-01.jpg",
+    title: "Fachada principal",
+    caption: "Registro de la fachada principal del palacio durante su periodo de esplendor.",
+  },
+  {
+    id: "fachada-espejo-agua",
+    src: "/archive/anexo-fachada-espejo-agua.jpg",
+    title: "Fachada y espejo de agua",
+    caption: "Vista del palacio desde los jardines, con el espejo de agua como elemento paisajístico.",
+  },
+  {
+    id: "primera-comunion",
+    src: "/archive/anexo-primera-comunion-palacio.jpg",
+    title: "Primera comunión en el palacio",
+    caption: "Registro de una ceremonia religiosa vinculada a la vida familiar y comunitaria del inmueble.",
+  },
+  {
+    id: "fachada-principal-dos",
+    src: "/archive/anexo-fachada-principal-palacio-02.jpg",
+    title: "Fachada principal con comitiva",
+    caption: "Imagen de la fachada principal con presencia de jinetes y asistentes frente al edificio.",
+  },
+  {
+    id: "agustin-edwards",
+    src: "/archive/anexo-retrato-agustin-edwards-ross.jpg",
+    title: "Retrato de Agustín Edwards Ross",
+    caption: "Retrato de Agustín Edwards Ross, figura vinculada a la historia familiar del Palacio Hacienda Quilpué.",
+  },
+  {
+    id: "familia-edwards-ross",
+    src: "/archive/anexo-familia-edwards-ross.jpg",
+    title: "Familia Edwards Ross",
+    caption: "Fotografía familiar de los Edwards Ross, registro asociado al contexto genealógico del inmueble.",
+  },
+  {
+    id: "arturo-edwards",
+    src: "/archive/anexo-estatua-arturo-edwards-ross.jpg",
+    title: "Estatua de Arturo Maximiano Edwards Ross",
+    caption: "Registro escultórico de Arturo Maximiano Edwards Ross, integrante de la familia vinculada al palacio.",
+  },
+  {
+    id: "palacio-1922",
+    src: "/archive/anexo-palacio-hacienda-quilpue-1922.jpg",
+    title: "Palacio Hacienda Quilpué, 1922",
+    caption: "Vista del Palacio Hacienda Quilpué publicada en 1922, relevante para observar su configuración arquitectónica y paisajística.",
+  },
 ];
 
 export default function Home() {
@@ -319,10 +451,11 @@ export default function Home() {
           <h2>Imágenes históricas del palacio</h2>
           <p>
             El recorrido incorpora registros fotográficos del Palacio Hacienda
-            Quilpué asociados al periodo de esplendor del inmueble. Estas
-            imágenes permiten observar el acceso, la fachada, los jardines, la
-            sociabilidad familiar y las prácticas religiosas vinculadas al
-            recinto.
+            Quilpué asociados al periodo de esplendor del inmueble, junto con
+            imágenes complementarias del anexo visual de la investigación.
+            Estos registros permiten observar el acceso, la fachada, los
+            jardines, la sociabilidad familiar, las prácticas religiosas y las
+            redes familiares vinculadas al recinto.
           </p>
         </div>
         <div className="archive-grid">

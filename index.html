@@ -33,6 +33,7 @@
           <a href="#linea-tiempo">Línea de tiempo</a>
           <a href="#palacio">Arquitectura</a>
           <a href="#ruinas">Estado actual</a>
+          <a href="#relatos">Relatos</a>
           <a href="#saber-mas">Saber más</a>
         </nav>
       </header>
@@ -95,20 +96,6 @@
             </p>
           </div>
         </div>
-        <div class="research-columns">
-          <article>
-            <h3>La hacienda</h3>
-            <p>Fue una propiedad agrícola relevante, con actividades vinculadas a viñedos, cáñamo, ganado, trabajo rural y redes productivas que contribuyeron al desarrollo económico de San Felipe.</p>
-          </article>
-          <article>
-            <h3>La familia Edwards Ross</h3>
-            <p>Su influencia política, económica y social marcó tanto la historia del inmueble como diversas obras de beneficencia en Chile.</p>
-          </article>
-          <article>
-            <h3>El ferrocarril</h3>
-            <p>La cercanía con la línea férrea fortaleció la conexión territorial y la comercialización de productos agrícolas del Valle del Aconcagua.</p>
-          </article>
-        </div>
       </section>
 
       <section class="section" id="patrimonio">
@@ -132,6 +119,10 @@
         </div>
       </section>
 
+      <section class="quote-band">
+        <p>“Versalles Chileno” fue la denominación con que se reconoció la singularidad del palacio: una arquitectura de inspiración europea emplazada en un territorio profundamente agrícola.</p>
+      </section>
+
       <section class="section archive-section" id="archivo">
         <div class="section-heading wide">
           <p class="eyebrow">Archivo visual</p>
@@ -144,7 +135,7 @@
             redes familiares vinculadas al recinto.
           </p>
         </div>
-        <div class="archive-grid">
+        <div class="archive-grid" id="galeria">
           <figure class="archive-card">
             <a href="#archivo-fachada">
               <img src="public/archive/hero-palacio-1915.jpg" alt="Fachada frontal del palacio" />
@@ -313,6 +304,9 @@
             </a>
             <figcaption><strong>Palacio Hacienda Quilpué, 1922</strong><span>Vista publicada en 1922, relevante para observar su configuración arquitectónica.</span></figcaption>
           </figure>
+        </div>
+        <div class="gallery-toggle-wrap">
+          <button type="button" class="gallery-toggle" id="galeriaBoton" aria-controls="galeria" aria-expanded="false">Ver galería completa</button>
         </div>
         <aside class="lightbox" id="archivo-fachada">
           <a class="lightbox-backdrop" href="#archivo" aria-label="Cerrar imagen"></a>
@@ -517,10 +511,10 @@
           <article class="feature-card"><span>Entorno y jardines</span><h3>Alamedas y espejo de agua</h3><p>Los jardines, senderos y el espejo de agua reforzaban la puesta en escena del edificio y su relación con el paisaje.</p></article>
           <article class="feature-card"><span>Función productiva</span><h3>Hacienda agrícola</h3><p>Quilpué operó como centro agrícola vinculado a viñedos, cáñamo, trabajo rural y redes económicas regionales.</p></article>
         </div>
-      </section>
-
-      <section class="quote-band">
-        <p>“Versalles Chileno” fue la denominación con que se reconoció la singularidad del palacio: una arquitectura de inspiración europea emplazada en un territorio profundamente agrícola.</p>
+        <figure class="plan-figure" id="plano">
+          <img src="public/archive/plano-palacio.jpg" alt="Plano del Palacio Hacienda Quilpué" onerror="this.closest('figure').hidden = true" />
+          <figcaption>Plano del conjunto del Palacio Hacienda Quilpué: palacio, jardines, accesos y espejo de agua.</figcaption>
+        </figure>
       </section>
 
       <section class="section split" id="ruinas">
@@ -542,6 +536,34 @@
             <strong>San Felipe, Región de Valparaíso</strong>
             <p>Su emplazamiento cercano a rutas agrícolas y a la red ferroviaria favoreció la circulación de productos, personas e ideas.</p>
           </aside>
+        </div>
+      </section>
+
+      <section class="section relatos-section" id="relatos">
+        <div class="section-heading wide">
+          <p class="eyebrow">Memoria oral</p>
+          <h2>Relatos</h2>
+          <p>
+            Testimonios de habitantes de San Felipe que conocieron el Palacio Hacienda Quilpué
+            y conservan recuerdos de sus espacios, sus jardines y su transformación en ruina.
+          </p>
+        </div>
+        <div class="more-info-list">
+          <details class="more-info-item" open>
+            <summary><span>01</span><h3>Rosana Pastenes Maldonado</h3></summary>
+            <p class="relato-fecha">Entrevista realizada el 19 de septiembre de 2026</p>
+            <p>Rosana recuerda las visitas al Palacio durante su infancia, cuando su padre la llevaba a recorrer sus jardines y pasajes. Entre sus recuerdos destacan los tallados de las murallas, los túneles, los árboles y el espejo de agua, que pudo ver lleno en una ocasión. Al regresar años después, encontró el lugar en ruinas, lo que le provocó nostalgia y tristeza. Para ella, conservar y reunir la historia del Palacio es importante, pues representa uno de los lugares más hermosos y significativos de la zona.</p>
+          </details>
+          <details class="more-info-item">
+            <summary><span>02</span><h3>Guillermo Vicuña Vicencio</h3></summary>
+            <p class="relato-fecha">Entrevista realizada el 18 de septiembre de 2026</p>
+            <p>Guillermo recuerda haber visitado el Palacio alrededor de 1968, durante una salida organizada por su escuela. En su recorrido pudo conocer las habitaciones y observar los muebles antiguos y la ornamentación interior, que le parecieron especialmente hermosos. Como habitante de San Felipe, conserva una imagen del Palacio como un lugar llamativo y excepcional. Considera una excelente idea reunir su historia en una página web y propone utilizar fotografías y recursos audiovisuales para acercar estos recuerdos a las personas.</p>
+          </details>
+          <details class="more-info-item">
+            <summary><span>03</span><h3>Marcia Zuleta Yébenes</h3></summary>
+            <p class="relato-fecha">Entrevista realizada el 18 de septiembre de 2026</p>
+            <p>Marcia recuerda haber observado el Palacio desde el exterior y, posteriormente, haber conocido sus espacios interiores, incluido el subterráneo. Entre los elementos que más destaca se encuentran el espejo de agua, la variedad de árboles y jardines, los pisos y las grandes tinas de los baños. Tras regresar de Antofagasta, encontró el edificio derrumbado. Considera maravilloso reunir su historia en una página web y expresa su deseo de que el Palacio pudiera restaurarse y convertirse en un espacio para toda la comunidad de San Felipe.</p>
+          </details>
         </div>
       </section>
 
@@ -625,5 +647,18 @@
         </div>
       </footer>
     </main>
+    <script>
+      (function () {
+        var grid = document.getElementById("galeria");
+        var btn = document.getElementById("galeriaBoton");
+        if (!grid || !btn) return;
+        btn.addEventListener("click", function () {
+          var open = grid.classList.toggle("is-open");
+          btn.setAttribute("aria-expanded", open);
+          btn.textContent = open ? "Ver menos" : "Ver galería completa";
+          if (!open) document.getElementById("archivo").scrollIntoView({ behavior: "smooth" });
+        });
+      })();
+    </script>
   </body>
 </html>

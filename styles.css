@@ -946,3 +946,102 @@ h3 {
     transform: none;
   }
 }
+
+/* ===== Correcciones reunión 25-10-2026 ===== */
+
+/* Texto justificado */
+p,
+li {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Juana Ross: la tarjeta ocupa todo el ancho y queda centrada */
+.juana-section .section-heading,
+.juana-section .portrait-study {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1160px;
+}
+
+/* Las leyendas cortas quedan mejor alineadas a la izquierda */
+.archive-card figcaption span,
+.archive-card p,
+.feature-card p,
+.synthesis-card p {
+  text-align: left;
+}
+
+/* Galería: solo 3 imágenes visibles hasta pulsar "Ver galería" */
+.archive-grid:not(.is-open) .archive-card:nth-child(n + 4) {
+  display: none;
+}
+
+.gallery-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.gallery-toggle {
+  background: var(--blue);
+  border: 0;
+  border-radius: 999px;
+  color: #fffaf2;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 14px 30px;
+}
+
+.gallery-toggle:hover {
+  opacity: 0.88;
+}
+
+/* Plano bajo Arquitectura */
+.plan-figure {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-top: 32px;
+  max-width: 1160px;
+  padding: 20px;
+}
+
+.plan-figure img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+.plan-figure figcaption {
+  color: var(--muted-ink);
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* Relatos */
+.relatos-section {
+  background: #f5efe6;
+  border-top: 1px solid var(--line);
+}
+
+.more-info-item p.relato-fecha {
+  border-top: 1px solid var(--line);
+  color: var(--clay);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-top: 18px;
+  padding-top: 14px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.more-info-item p.relato-fecha + p {
+  border-top: 0;
+  margin-top: 10px;
+  padding-top: 0;
+}
